@@ -1,0 +1,140 @@
+<!--
+    Name: Margaret Donin
+    Date Created: 3/23/20
+    Most recent revision: 3/25/20
+-->
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Rita's Portfolio</title>
+        <link href = "styles/main.css" rel = "stylesheet" type = "text/css" />
+        <style>
+            caption {
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-bottom: 8px;
+            }
+
+            table, th, td{
+                border: 1px solid #0d1f2d;
+                border-collapse: collapse;
+                padding: 5px 10px;
+            }
+
+            table {
+                width: 90%;
+                margin: auto;
+            }
+
+            tr {
+                height: 30px;
+            }
+
+            th {
+                background-color: #546a7b;
+                color: #f2eded;
+            }
+
+            tr:nth-child(odd) {
+                background-color: #e4c3ad;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Portfolio for Rita Donin</h1>
+        </header>
+
+        <nav class = "border"> <!--navigation buttons and links-->
+            <p><a href = "">Home</a></a></p>
+            <p><a href = "projects.html">Projects<a></a></p>
+            <p><a href = "contact.html">Contact Information</a></p>
+            <p><a href = "testimonials.html"> Testimonials</a></p>
+        </nav>
+
+        <section> <!--This section has three parts-->
+            <article class = "border" id = "about-me"> <!--1 of 3-->
+                <h2><em> About Me</em></h2>
+                <img src = "images/cat.jpg"
+                    alt = "Black Cat"
+                    style = "width: 200px"
+                />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Phasellus efficitur scelerisque neque nec vehicula. </strong> In et mollis nunc, vel pulvinar odio. Donec tincidunt blandit aliquet. Sed ut dui enim. Cras laoreet nisl lorem, eu consequat massa auctor eu. Suspendisse eleifend lacus nec pellentesque aliquet. Aliquam at neque dui. Integer non ex vulputate, accumsan est tempor, tempus diam.</p>
+                <p>Vestibulum nec semper nibh. <strong>Sed aliquet eros sit amet aliquam euismod. Aliquam rhoncus placerat molestie. Donec non volutpat eros. </strong> In volutpat mauris vitae mi sodales, ut consectetur elit lacinia. Mauris quis cursus ipsum, non euismod erat. Aliquam sed neque mauris. Fusce sit amet lectus ligula. Mauris consectetur vel enim et iaculis. In elit lectus, dictum ut efficitur quis, lobortis id ipsum. Nam ultricies velit et neque dictum varius. Etiam condimentum nec odio eget rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur mollis a dolor sed convallis..</p>
+            </article>
+
+            <article id = "past-expereinces"> <!--2 of 3-->
+                <h2><em>Past Experiences</em></h2>
+                <img src = "images/coding.jpg"
+                    alt = "Coding"
+                    style = "width: 200px"
+                />
+                <table>
+                    <caption>Employment History</caption>
+                    <tr>
+                        <th>Years Employed</th>
+                        <th>Title</th>
+                        <th>Employer</th>
+                    </tr>
+                    <tr>
+                        <td>03/20 - Present</td>
+                        <td>Apprentice</td>
+                        <td>The Software Guild</td>
+                    </tr>
+                    <tr>
+                        <td>09/19 - 10/20</td>
+                        <td>Server</td>
+                        <td>Tully's Good Times</td>
+                    </tr>
+                    <tr>
+                        <td>05/18 - 07/19</td>
+                        <td>Server</td>
+                        <td>Pelican's Nest</td>
+                    </tr>
+                </table>
+            </article>
+
+            <article id = "hobbies"> <!--3 of 3-->
+                <h2><em>Hobbies</em></h2>
+                <img src = "images/cubes.png"
+                alt = "colorful cubes"
+                style = "width: 200px"
+                />
+                <ul style = "list-style-type: square;">
+                    <li>Rubik's Cube</li>
+                        <ol  type = "I">
+                            <li>3x3x3</li>
+                            <li>Megaminx</li>
+                            <li>X-Cube</li>
+                            <li>Ghost Cube</li>
+                            <li>Pyraminx</li>
+                        </ol>
+                    <li>Phone Games</li>
+                        <ol type = "I">
+                            <li>Animal Restaurant</li>
+                            <li>Klondike</li>
+                            <li>Penguin Isle</li>
+                        </ol>
+                </ul>
+                <ul>
+                    <li>TV Shows</li>
+                        <ul>
+                            <li>White Collar</li>
+                            <li>Downton Abbey</li>
+                            <li>Pan Am</li>
+                        </ul>
+                    <li>Outdoor Activities</li>
+                        <ul>
+                            <li>Hiking in national parks</li>
+                            <li>Swimming at the beach</li>
+                            <li>Playign in the snow</li>
+                        </ul>
+                </ul>
+            </article>
+        </section>
+        
+        <footer>
+            <p>&copy; 2020 Margaret Donin. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
