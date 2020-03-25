@@ -1,33 +1,110 @@
 <!--
     Name: Margaret Donin
     Date Created: 3/24/20
-    Most recent revision:
+    Most recent revision: 3/25/20
 -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <!--
-        <link href="RELATIVE LINK" rel="stylesheet">
-        -->
         <title>Landing Page</title>
         <style>
+            body {
+                background-image: url(images/sheetmusic.jpg);
+                background-repeat: repeat;
+            }
+
+            section, header, footer {
+                border: solid 5px whitesmoke;
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            section {
+                padding: 5% 10%;
+                margin: 2% 15% 5%;
+                font-size: 20px;
+            }
+
+            header {
+                text-align: center;
+                margin: 5% 15% 2%;
+                font-size: 30px;
+            }
+
+            footer {
+                text-align: center;
+                margin: 2% 15% 5%;
+                font-size: 18px;
+            }
+
+            img {
+                float: right;
+                width: 200px;
+                border: medium double #490263;
+            }
+
+            article{
+                padding: 3%;
+            }
         </style>
     </head>
+
     <body>
-        <h1>Landing Page: All the projects</h1>
+        <header>
+            <h1>Landing Page:</h1>
+            <h2>All the projects</h2>
+        </header>
+
         <section>
             <article>
-                <h2>HTML Projects</h2>
-                <p><a href = "html/portfolio/index.html">Portfolio</a></p>
-                <p><a href = "html/restaurant/index.html">Restaurant</a></p>
+                <h3>Links</h3>
+                <img src = "images/wordcloud.png" alt = "word cloud" />
+                <ul>
+                    <li><a href = "rtdonin.wordpress.com">My blog</a></li>
+                    <li><a href = "https://github.com/rtdonin">My github</a></li>
+                </ul>
+
             </article>
-            <article>
-                <h2>CSS Project</h2>
+
+            <article id = "html">
+                <h3>HTML Projects</h3>
+                <img src = "images/done.png" alt = "completed" />
+                <ul>
+                    <li><a href = "html/portfolio/index.html">Portfolio</a></li>
+                    <li><a href = "html/restaurant/index.html">Restaurant</a></li>
+                </ul>
             </article>
+
+            <article id = "css">
+                <h3>CSS Project</h3>
+                <img src = "images/happiness.jpg" alt = "children winning" />
+                <p>Coming soon!</p>
+                <ul style = "list-style-type: none;">
+                    <li>Supposedly</li>
+                    <li>Maybe</li>
+                </ul>
+            </article>
+
+            <article id = "js">
+                <h3>JavaScript Project</h3>
+                <img src = "images/sadness.jpg" alt = "Sad girl" />
+                <p>Coming not as soon</p>
+                <ul style = "list-style-type: none;">
+                    <li>Hopefully</li>
+                    <li>Sooner</li>
+                </ul>
+            </article>
+
             <article>
-                <h2>JavaScript Project</h2>
+                <h3>Miscellaneous</h3>
+                <ul>
+                    <li><a href = "https://editor.p5js.org/rtdonin/sketches/ijzBqLDX">Pair Challenge from the Vestibule</a></li>
+                    <li><a href = "https://editor.p5js.org/rtdonin/sketches/c9msJHcTa">Vestibule Final Project</a></li>
+                </ul>
             </article>
         </section>
+
+        <footer>
+            <p>Margaret Donin's TechHire Projects</p>
+        </footer>
     </body>
 </html>
