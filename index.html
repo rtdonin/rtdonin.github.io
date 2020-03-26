@@ -37,14 +37,23 @@
             }
 
             img {
-                float: right;
                 width: 200px;
                 border: medium double #490263;
+                float: right;
             }
 
             article{
                 padding: 3%;
             }
+/*
+            .odd, .evenImg{
+                align-content: left;
+            }
+
+            .even, .oddImg{
+                right: auto;
+            }
+*/            
         </style>
     </head>
 
@@ -55,46 +64,48 @@
         </header>
 
         <section>
-            <article>
+            <article class = "odd">
                 <h3>Links</h3>
-                <img src = "images/wordcloud.png" alt = "word cloud" />
+                <img id = "oddImg" src = "images/wordcloud.png" alt = "word cloud" />
                 <ul>
-                    <li><a href = "rtdonin.wordpress.com">My blog</a></li>
+                    <li><a href = "https://rtdonin.wordpress.com">My blog</a></li>
                     <li><a href = "https://github.com/rtdonin">My github</a></li>
                 </ul>
 
             </article>
 
-            <article id = "html">
+            <article class = "even">
                 <h3>HTML Projects</h3>
-                <img src = "images/done.png" alt = "completed" />
+                <img id = "evenImg" src = "images/done.png" alt = "completed" />
                 <ul>
                     <li><a href = "html/portfolio/index.html">Portfolio</a></li>
                     <li><a href = "html/restaurant/index.html">Restaurant</a></li>
                 </ul>
             </article>
 
-            <article id = "css">
+            <article class = "odd">
                 <h3>CSS Project</h3>
-                <img src = "images/happiness.jpg" alt = "children winning" />
+                <img class = "oddImg" src = "images/happiness.jpg" alt = "children winning" />
                 <p>Coming soon!</p>
                 <ul style = "list-style-type: none;">
                     <li>Supposedly</li>
-                    <li>Maybe</li>
+                    <li style = "text-indent: 1.5em">Maybe</li>
+                    <br />
+                    <li><a href = "css/portfolio/index.html">Portfolio</a></li>
                 </ul>
             </article>
 
-            <article id = "js">
+            <article class = "even">
                 <h3>JavaScript Project</h3>
-                <img src = "images/sadness.jpg" alt = "Sad girl" />
+                <img class = "evenImg" src = "images/sadness.jpg" alt = "Sad girl" />
                 <p>Coming not as soon</p>
                 <ul style = "list-style-type: none;">
-                    <li>Hopefully</li>
+                    <li  style = "text-indent: 1.5em">Hopefully</li>
                     <li>Sooner</li>
                 </ul>
             </article>
 
-            <article>
+            <article class = "odd">
                 <h3>Miscellaneous</h3>
                 <ul>
                     <li><a href = "https://editor.p5js.org/rtdonin/sketches/ijzBqLDX">Pair Challenge from the Vestibule</a></li>
@@ -104,7 +115,7 @@
         </section>
 
         <footer>
-            <p>Margaret Donin's TechHire Projects</p>
+            <p>Margaret Donin's TechHire and WebDesign Projects</p>
         </footer>
     </body>
 </html>
