@@ -32,8 +32,8 @@ function positive() {
         mouseX.innerText = "Untracked";
         mouseY.innerText = "Untracked";
     } else {
-        this.classList.add("btn-warning");
         this.classList.remove("btn-info");
+        this.classList.add("btn-warning");
         this.innerText = "upside down! :)";
 
         alert("the blue button makes the X value be the Y value and vise versa");
@@ -71,10 +71,10 @@ function stopTracking(evt) {
 // A reference to the function is attached to the DOM. We don't execute them explicitly. 
 document.getElementById("btnToggle").addEventListener("click", toggle);
 document.addEventListener("mousemove", updateMousePosition);
-// document.getElementById("btnToggle").addEventListener("keydown", stopTracking);
-// document.addEventListener("keyup", toggle);
+document.addEventListener("keydown", stopTracking);
+document.addEventListener("keyup", toggle);
 
 document.getElementById("btnPositive").addEventListener("click", positive);
 document.addEventListener("mousemove", reverseMousePosition);
-// document.getElementById("btnPositive").addEventListener("keyup", stopTracking);
-// document.getElementById("btnPositive").addEventListener("keyup", positive);
+document.addEventListener("keydown", stopTracking);
+document.addEventListener("keyup", positive);
