@@ -9,7 +9,7 @@
 // Tip: Start with 2 numbers in the array. Once the function works with 2 numbers, add a third, and so on.
 // Write your code here:
 function findMax(numbers) {
-    var max = 0;
+    var max;
     for (var i = 0; i < numbers.length; i++){
         if (i == 0) {
             max = numbers[i];
