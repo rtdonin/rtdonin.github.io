@@ -68,4 +68,4 @@ document.getElementById("btnToggle").addEventListener("click", toggle);
 document.getElementById("btnPositive").addEventListener("click", positive);
 document.addEventListener("mousemove", updateMousePosition);
 
-document.getElementById("entirePage").addEventListener("click", stopTracking);
+// document.getElementById("entirePage").addEventListener("click", stopTracking);
