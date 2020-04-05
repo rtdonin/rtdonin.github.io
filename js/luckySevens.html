@@ -1,0 +1,76 @@
+<!--
+    Name: Margaret Donin
+    Date Created: 04/05/20
+    Most recent revision:
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+        <title>Lucky Sevens</title>
+        <style>
+            .form-row {
+                margin: 1%;
+            }
+
+            td, table {
+                border: thin solid gray; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "container">
+            <h1>Lucky Sevens</h1>
+
+            <form name = "placingTheBet" class = "needs-validation" onsubmit = "return validate();" novalidate>
+                <div class = "form-row">
+                    <lable class = "col-3" for = "strtBet">Starting Bet</lable>
+                    <input class = "col-3 form-control" type = "number" id = "strtBet" name = "strtBet" placeholder = "$0.00" required>
+                    <div class = "col-6 text-left invalid-feedback">
+                        Starting Bet is required and must be greater than zero.
+                    </div>
+                </div> <!--end of .form-row-->
+                
+                <div class = "form-row">
+                    <div class = "col-3"></div>
+                    <button id = "playBtn" type = "submit" class = "btn btn-outline-secondary col-2">
+                        Play
+                    </button>
+                </div> <!--end of .form-row-->
+            </form>
+
+            <!--results-->
+            <section id = "results" class = "col-5" style = "display: none;">
+                <table class = "table table-striped">
+                    <tr>
+                        <td>Starting Bet</td>
+                        <td>$<span id = printStrtBet></span></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Total Rolls Before Going Broke</td>
+                        <td><span id = printTotalRolls></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Highest Amount Won</td>
+                        <td>$<span id = printHighestAmtWon></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Roll Count at Highest Amount Won</td>
+                        <td><span id = printRollCountAtHightestAmtWon></span></td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+
+        <script src = "luckySevens.js"></script>
+        <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin = "anonymous"></script>
+    </body>
+</html>

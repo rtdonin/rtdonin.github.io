@@ -4,8 +4,6 @@
 	Most recent revision: 4/03/20
 */
 
-
-// evensInfo.className = "needs-validation";				// we need to reset the validatin
 // evensInfo.reset();										// resets form
 
 
@@ -20,24 +18,23 @@ function validate() {
 	endNum.setCustomValidity('');							// resets validity
 	step.setCustomValidity('');
 
-	console.log("step is: " + step);
 	var startNumber = parseInt(strtNum.value, 10);
     var endNumber = parseInt(endNum.value, 10);
     var stepNumber = parseInt(step.value, 10);
-	console.log("after parseint, step is: " + stepNumber);
+
 	evens.style.display = "none";						// hides previous evens and user input
 	document.getElementById("answers").innerHTML = "";	// "resets" the answers
 		
 	if (endNumber <= startNumber) {						// must be two seperate if statments or it will not check both.
 		console.log(endNumber);
 		evensInfo.className = "was-validated";
-		document.getElementById("endNum").setCustomValidity("prob with end num");
+		endNum.setCustomValidity("prob with end num");
 	}
 	
 	if (stepNumber <= 0) {
 		console.log(stepNumber);
 		evensInfo.className = "was-validated";
-		document.getElementById("step").setCustomValidity("prob with step num");
+		step.setCustomValidity("prob with step num");
 		return false;
 	}
 
