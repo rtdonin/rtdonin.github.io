@@ -38,10 +38,10 @@
                 <h3 class = "text-right mt-5">Solving Web Dev problems every day!</h3>
             </header>
             
-        <nav>
-            <a class = "btn badge-pill" href = "contact.html">Contact Me</a>
-            <a class = "btn badge-pill" href = "projects.html">Projects</a>
-        </nav>
+            <nav>
+                <a class = "btn badge-pill" href = "contact.html">Contact Me</a>
+                <a class = "btn badge-pill" href = "projects.html">Projects</a>
+            </nav>
 
             <div class = "row">
                 <div class = "col-lg-3 col-md">
@@ -51,8 +51,46 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Phasellus efficitur scelerisque neque nec vehicula. </strong> In et mollis nunc, vel pulvinar odio. Donec tincidunt blandit aliquet. Sed ut dui enim. Cras laoreet nisl lorem, eu consequat massa auctor eu. Suspendisse eleifend lacus nec pellentesque aliquet. Aliquam at neque dui. Integer non ex vulputate, accumsan est tempor, tempus diam.</p>
                     <p>Vestibulum nec semper nibh. <strong>Sed aliquet eros sit amet aliquam euismod. Aliquam rhoncus placerat molestie. Donec non volutpat eros. </strong> In volutpat mauris vitae mi sodales, ut consectetur elit lacinia. Mauris quis cursus ipsum, non euismod erat. Aliquam sed neque mauris. Fusce sit amet lectus ligula. Mauris consectetur vel enim et iaculis. In elit lectus, dictum ut efficitur quis, lobortis id ipsum. Nam ultricies velit et neque dictum varius. Etiam condimentum nec odio eget rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur mollis a dolor sed convallis..</p>
                 </div>
-            </div>
-        </div>
+            </div> <!--end of .row-->
+
+            <div class = "accordian" id = "accordionExample">
+                <div class = "card">
+                    <div class = "card-header" id = "portfolio01">
+                        <h5 class = "mb-0">
+                            <button class = "btn btn-link" type = "button" data-toggle = "collapse" data-target = "#collapseOne" aria-expanded = "false" aria-controls = "collapseOne">
+                                My First Portfolio Piece
+                            </button>
+                        </h5>
+                    </div> <!--end #portfolio01-->
+
+                    <div id = "collapseOne" class = "collapse" aria-labelledby = "headingOne" data-parent = "#accordionExample">
+                        <div class = "card-body">
+                            <p><a href = "" target = "_blank">Introverts Bar</a></a></p>
+                            <figure><img src = "images/homepage1.png" alt = "Screenshot of homepage" /></figure>
+                        </div> <!--end of .card-body-->
+                    </div> <!--end of #collapseOne-->
+                </div> <!--end of .card-->
+
+                <div class = "card">
+                    <div class = "card-header" id = "portfolio02">
+                        <h5 class = "mb-0">
+                            <button class = "btn btn-link" type = "button" data-toggle = "collapse" data-target = "#collapseTwo" aria-expanded = "false" aria-controls = "collapseTwo">
+                                My Second Porfolio Piece
+                            </button>
+                        </h5>
+                    </div> <!--end #portfolio02-->
+
+                    <div id = "collapseTwo" class = "collapse" aria-labelledby = "headingTwo" data-parent = "#accordionExample">
+                        <div class = "card-body">
+                            <p><a href = "" target = "_blank">Introvert's Bar Menu</a></p>
+                            <figure><img src = "images/homepage2.png" alt = "screenshot of menu page" /></figure>
+                        </div> <!--end of .card-body-->
+                    </div> <!--end of #collapseTwo-->
+                </div><!--end of .card-->
+
+            </div> <!--end of .accordian-->
+        </div> <!--end of .container-->
+
         <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
         <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
