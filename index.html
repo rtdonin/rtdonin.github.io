@@ -11,6 +11,7 @@
             body {
                 background-image: url(images/sheetmusic.jpg);
                 background-repeat: repeat;
+                background-color: rosybrown;
             }
 
             section, header, footer {
@@ -42,8 +43,24 @@
                 float: right;
             }
 
-            article{
+            article {
                 padding: 3%;
+            }
+
+            a{
+                color:rgb(37, 24, 7);
+                text-decoration: none;
+            }
+
+            a:visited {
+                color:rgb(255, 162, 219);
+                text-decoration: none;
+            }
+
+            a:hover {
+                color:rgb(136, 88, 26);
+                font-weight: bold;
+                text-decoration: none;
             }
            
         </style>
@@ -88,10 +105,9 @@
             <article class = "even">
                 <h3>JavaScript Project</h3>
                 <img class = "evenImg" src = "images/sadness.jpg" alt = "Sad girl" />
-                <p>Coming not as soon</p>
-                <ul style = "list-style-type: none;">
-                    <li  style = "text-indent: 1.5em">Hopefully</li>
-                    <li>Sooner</li>
+                <ul>
+                    <li><a href = "js/portfolio/bootstrap_JS_portfolio.html">Mock Portfolio with Bootstrap with JavaScript</li>
+                    <li><a href = "js/restaurant/index.html">Restaurant</a></li>
                 </ul>
             </article>
 
