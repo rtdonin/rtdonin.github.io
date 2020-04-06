@@ -1,7 +1,7 @@
 <!--
     Name: Margaret Donin
     Date Created: 3/24/20
-    Most recent revision: 3/27/20
+    Most recent revision: 04/05/20
 
     08182C dark blue
     166975 lighter blue
@@ -31,26 +31,20 @@
                 border: thick solid #CBC0A8;
             }
             
-            table {
-                font-family: 'Amatic SC';
+            #carousel {
                 background-color: #08182C;
-                color: #EDF6FC;
                 border: thick solid #CBC0A8;
-                margin: 3%;
-                padding: 2%;
+                max-width: 100%;
+                max-height: 100%;
             }
 
-            td{
-                margin: 3%;
-                padding: 2%;
-                text-align: left;
-                font-size: large;
+            img{
+                max-height: 400px;
             }
 
-            tr {
-                margin: 2%;
-                padding: 3%;
-                border-bottom: thin solid #CBC0A8;
+            .carousel-caption {
+                background-color: rgba(237, 246, 252, 0.747);
+                color: #08182C;
             }
 
         </style>
@@ -65,13 +59,78 @@
 
             <nav class = "row">
                 <p class = "col-2 btn"><a href = "index.html">Home</a></p>
-                <p class = "col-2 btn"><a href = "">Menu</a></p>
+                <p class = "col-2 btn current-page"><a href = "">Menu</a></p>
                 <p class = "col-2 btn"><a href = "contact.html">Contact Us</a></p>
             </nav>
 
             <!--menu items-->
             <section class = "menu">
                 <h2>Lunch & Dinner</h2>
+
+                <!--the carousel-->
+                <div id = "carousel" class = "carousel slide justify-content-between" data-ride = "carousel">
+                    <ol class = "carousel-indicators">
+                        <li data-target = "#carousel" data-slide-to = "0" class = "active"></li>
+                        <li data-target = "#carousel" data-slide-to = "1"></li>
+                        <li data-target = "#carousel" data-slide-to = "2"></li>
+                        <li data-target = "#carousel" data-slide-to = "3"></li>
+                        <li data-target = "#carousel" data-slide-to = "4"></li>
+                    </ol>
+                    
+                    <div class = "carousel-inner">
+                        <div class = "carousel-item active">
+                            <img class = "img-fluid mx-auto d-block" src = "images/foobar.jpg" alt = "Foo Bar">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Grand Opening of our sister bar, Foo Bar.</h5>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>    
+                            </div>
+                        </div>
+
+                        <div class = "carousel-item">
+                            <img class = "img-fluid mx-auto d-block" src = "images/seasonalMenu1.jpg" alt = "Seasonal Menu item, salmon">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Please Don't Make Eye Contact With Me Salmon</h5>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non nisl sed tellus placerat lacinia at in nibh.</p>        
+                            </div>
+                        </div>
+
+                        <div class = "carousel-item">
+                            <img class = "img-fluid mx-auto d-block" src = "images/drinkOfTheMonth.jpg" alt = "Drink of the Month">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Perfectly Fine By Myself Vodka Lemonda</h5>
+                                <p>Our new montly drink!</p>
+                            </div>
+                        </div>
+
+                        <div class = "carousel-item">
+                            <img class = "img-fluid mx-auto d-block" src = "images/seasonalMenu2.jpg" alt = "Seasonal Menu item, steak">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>My Reward for Peopling Steak</h5>
+                                <p>Vivamus commodo, tellus at maximus tempor, odio augue pharetra libero, in volutpat lectus eros quis dui.</p>
+                            </div>
+                        </div>
+
+                        <div class = "carousel-item">
+                            <img class = "img-fluid mx-auto d-block" src = "images/hopeToSeeYouSoon.jpg" alt = "Hope to see you soon">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Hope to see you soon!</h5>
+                                <p>We offer takeout for those that have met their daily quota for interacting with people.</p>
+                            </div>
+                        </div>
+                    </div> <!--end .carouself-inner (actual photos)-->
+
+                    <!--controls-->
+                    <a class = "carousel-control-prev" href = "#carousel" role = "button" data-slide = "prev">
+                        <span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
+                        <span class = "sr-only">Previous</span>
+                    </a>
+
+                    <a class = "carousel-control-next" href = "#carousel" role = "button" data-slide = "next">
+                        <span class = "carousel-control-next-icon" aria-hidden = "true"></span>
+                        <span class = "sr-only">Next</span>
+                    </a>
+                </div> <!--end #carousel-->
+
                 <!--first menu row-->
                 <div class = "row justify-content-around">
                     <div class = "col-lg-3 item">
@@ -154,9 +213,7 @@
                         <td>$5.00</td>
                     </tr>
                 </table>
-
-
-            </section>
+            </section> <!--end of menu-->
             
             <footer class = "display-5">
                 <h4>6 Summerhouse Street, Freeport, NY 11520</h4>

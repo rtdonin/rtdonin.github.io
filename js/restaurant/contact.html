@@ -1,7 +1,7 @@
 <!--
     Name: Margaret Donin
-    Date Created: 3/24/20
-    Most recent revision: 3/27/20
+    Date Created: 03/24/20
+    Most recent revision: 04/05/20
 
     08182C dark blue
     166975 lighter blue
@@ -44,71 +44,121 @@
             <nav class = "row justify-content-start">
                 <p class = "col-2 btn"><a href = "index.html">Home</a></p>
                 <p class = "col-2 btn"><a href = "menu.html">Menu</a></p>
-                <p class = "col-2 btn"><a href = "">Contact Us</a></p>                
+                <p class = "col-2 btn current-page"><a href = "">Contact Us</a></p>                
             </nav>
             
-            <form action = "submit.html" method = "POST">
-                <div class = "row align-items-center">
-                    <lable class = "col-4 text-right req" for = "name">Name:</lable>
-                    <input class = "col-4" type = "text" id = "name" name = "name">
+            <section>
+                <form name = "contactInfo" class = "needs-validation" onsubmit = "return validate();" onreset = "reset();" novalidate>
+                    <div class = "form-row align-items-center">
+                        <lable class = "col-4 text-right req" for = "name">Name:</lable>
+                        <input class = "col-4 form-control" type = "text" id = "name" name = "name" placeholder = "Introvert's Name" required>
+                        <div class = "col-5"></div>
+                        <div class = "col-6 text-left align-self-center invalid-feedback">
+                            Name is required.
+                        </div>
+                    </div>  <!--end of .row (name)-->
+
+                    <div class = "form-row align-items-center">
+                        <lable class = "col-4 text-right req" for = "email">Email:</lable>
+                        <input class = "col-4 form-control" type = "text" id = "email" name = "email" placeholder = "staying@home.com" required>
+                        <div class = "col-5"></div>
+                        <div class = "col-6 text-left invalid-feedback">
+                            Email is required.
+                        </div>
+                    </div>  <!--end of .row (email)-->
+
+                    <div class = "form-row align-items-center">
+                        <lable class = "col-4 text-right  req" for = "phone">Phone:</lable>
+                        <input class = "col-4 form-control" type = "text" id = "phone" name = "phone" placeholder = "##########" required>
+                        <div class = "col-5"></div>
+                        <div class = "col-6 text-left invalid-feedback">
+                            Phone number is required. Do not include spaces or dashes. We promise to text first.
+                        </div>
+                    </div> <!--end of .row (phone)-->
+
+                    <div class = "form-row align-items-center">
+                        <lable class = "col-4 text-right req" for = "reason">Reason for Inquiry:</lable>
+                        <select class = "col-4" id = "reason" name = "reason">
+                            <option value = "catering" selected>Catering (default)</option>
+                            <option value = "party">Private Party</option>
+                            <option value = "feedback">Feedback</option>
+                            <option value = "other">Other</option>
+                        </select>
+                    </div> <!--end of .row (reason)-->
+
+                    <div class = "form-row align-items-center">
+                        <lable class = "col-4 text-right" for = "info">Additional Information:</lable>
+                        <textarea class = "col-4" id = "info" name = "info" placeholder = "The more we know the less we all need to interact with others."></textarea>
+                    </div> <!--end of .row (additional info)-->
+
+                    <div class = "form-row align-items-center">
+                        <lable class = "col-4 text-right req" for = "patronage">Have you been to the restaurant?</lable>
+                        <div class = "col-4 text-left">
+                            <input type = "radio" name = "patronage" value = "NO" checked>No
+                            <input type = "radio" name = "patronage" value = "YES">Yes
+                        </div>
+                    </div> <!--end of .row (have you ever been here before)-->
+
+                    <div class = "form-row align-items-center">
+                        <lable class = "col-4 text-right" for = "time">Best days to contact you?</lable>
+                        <div class = "col-4">
+                            <input type = "checkbox" name = "time" value = "M">M
+                            <input type = "checkbox" name = "time" value = "T">T
+                            <input type = "checkbox" name = "time" value = "W">W
+                            <input type = "checkbox" name = "time" value = "T">Th
+                            <input type = "checkbox" name = "time" value = "F">F
+                        </div>
+                    </div> <!--end of .row (best time to contact you)-->
+
+                    <input class = "btn align-self-center badge-pill" id = "submitBtn" type = "submit" value = "Send Request">
+                    <input class = "btn align-self-center badge-pill" id = "resetBtn" type = "reset" value = "Reset">
+                </form>
+
+                <div id = "submittedContactInfo" class = "justify-content-around" style = "display: none;">
+                    <p>Please verify your contact infromation was submitted correctly.</p>
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td id = printName></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td id = printEmail></td>
+                        </tr>
+                        <tr>
+                            <td>Phone:</td>
+                            <td id = printPhone></td>
+                        </tr>
+                        <tr>
+                            <td>Reason for Inquiry:</td>
+                            <td id = printReason></td>
+                        </tr>
+                        <tr>
+                            <td>Additional Information:</td>
+                            <td id = printAdditionalInfo></td>
+                        </tr>
+                        <tr>
+                            <td>Have you ever been here before:</td>
+                            <td id = printPatronage></td>
+                        </tr>
+                        <tr style = "border-bottom: none;">
+                            <td>Best times to contact you:</td>
+                            <td id = printBestTime></td>
+                        </tr>
+                    </table>
                 </div>
-
-                <div class = "row align-items-center">
-                    <lable class = "col-4 text-right req" for = "email">Email:</lable>
-                    <input class = "col-4" type = "text" id = "email" name = "email">
-                </div>
-
-                <div class = "row align-items-center">
-                    <lable class = "col-4 text-right  req" for = "phone">Phone:</lable>
-                    <input class = "col-4" type = "text" id = "phone" name = "phone">
-                </div>
-
-                <div class = "row align-items-center">
-                    <lable class = "col-4 text-right req" for = "reason">Reason for Inquiry:</lable>
-                    <select class = "col-4" id = "reason" name = "reason">
-                        <option value = "catering" selected>Catering (default)</option>
-                        <option value = "party">Private Party</option>
-                        <option value = "feedback">Feedback</option>
-                        <option value = "other">Other</option>
-                    </select>
-                </div>
-
-                <div class = "row align-items-center">
-                    <lable class = "col-4 text-right" for = "info">Additional Information:</lable>
-                    <textarea class = "col-4" id = "info" name = "info"></textarea>
-                </div>
-
-                <div class = "row align-items-center">
-                    <lable class = "col-4 text-right req" for = "patronage">Have you been to the restaurant?</lable>
-                    <div class = "col-4">
-                        <input type = "radio" name = "patronage" value = "NO" checked>No
-                        <input type = "radio" name = "patronage" value = "YES">Yes
-                    </div>
-                </div>
-
-                <div class = "row align-items-center">
-                    <lable class = "col-4 text-right" for = "time">Best days to contact you?</lable>
-                    <div class = "col-4">
-                        <input type = "checkbox" name = "time" value = "M">M
-                        <input type = "checkbox" name = "time" value = "T">T
-                        <input type = "checkbox" name = "time" value = "W">W
-                        <input type = "checkbox" name = "time" value = "T">Th
-                        <input type = "checkbox" name = "time" value = "F">F
-                    </div>
-                </div> 
-
-                <input class = "align-self-center badge-pill" type = "submit" value = "Send Request">
-            </form>
+            </section> 
 
             <footer class = "display-5">
                 <h4>6 Summerhouse Street, Freeport, NY 11520</h4>
                 <h4>562-296-6837</h4>
             </footer>
+        </div> <!--end of .container-->
 
-            <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
-            <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
-            <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
-            <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin = "anonymous"></script>
-        </div>
+        <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin = "anonymous"></script>
+        <script src = "scripts/restaurantScript.js"></script>
     </body>
 </html>

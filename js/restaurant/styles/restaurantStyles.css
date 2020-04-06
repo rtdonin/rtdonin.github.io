@@ -1,7 +1,7 @@
 /*
     Name: Margaret Donin
-    Date Created: 3/26/20
-    Most recent revision:
+    Date Created: 03/26/20
+    Most recent revision: 04/05/20
 
     08182C dark blue
     166975 lighter blue
@@ -37,7 +37,7 @@ h1, h2, h3, footer {
     border: #CBC0A8 thick solid;
 }
 
-section, form {
+section {
     background-color: rgba(107, 166, 147, 0.253);
     border: #6ba693 dashed thin;
     padding: 5% 10%;
@@ -56,15 +56,10 @@ footer {
     padding: 2%;
 }
 
-h2, h3{
+h2, h3 {
     margin: 3%;
     padding: 1%;
     text-align: center;
-}
-
-nav {
-    padding: 0 2%;
-
 }
 
 a {
@@ -77,6 +72,11 @@ a:hover {
     color: unset;
 }
 
+/* nav btn styling*/
+nav {
+    padding: 0 2%;
+
+}
 .btn {
     color: #EDF6FC;
     background-color: #08182C;
@@ -84,14 +84,45 @@ a:hover {
     margin: 2%;
     text-decoration-line: none;
 }
-
-.btn:active {
+.current-page {
+    background-color: #CBC0A8;
+    color: #08182C;
     font-weight: bold;
     text-decoration-line: none;
 }
-
+.btn:active {
+    color: #EDF6FC;
+    background-color: #08182C;
+    font-weight: bold;
+    text-decoration-line: none;
+}
 .btn:hover {
     background-color: #CBC0A8;
     color: #08182C;
     text-decoration: none;
 }
+
+/* table styling */
+table {
+    font-family: 'Amatic SC';
+    background-color: #08182C;
+    color: #EDF6FC;
+    border: thick solid #CBC0A8;
+    margin: 3%;
+    padding: 2%;
+}
+
+td{
+    margin: 3%;
+    padding: 2%;
+    text-align: left;
+    font-size: large;
+}
+
+tr {
+    margin: 2%;
+    padding: 3%;
+    border-bottom: thin solid #CBC0A8;
+}
+
+ 
