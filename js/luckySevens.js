@@ -21,8 +21,7 @@ function validate() {
     if (!placingTheBet.checkValidity()) {
         placingTheBet.className = "was-validated";
         return false;
-    } else
-        if (strtBetN <= 0) {
+    } else if (strtBetN <= 0) {
         placingTheBet.className = "was-validated";
         strtBetS.setCustomValidity("You need to play more money");
         return false;

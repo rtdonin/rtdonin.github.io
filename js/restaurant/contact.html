@@ -31,6 +31,9 @@
                 font-weight: bold;
             }
 
+            .badge-pill:active {
+                border: none;
+            }
         </style>
         <title>Contact Us</title>
     </head>
@@ -48,13 +51,13 @@
             </nav>
             
             <section>
-                <form name = "contactInfo" class = "needs-validation" onsubmit = "return validate();" onreset = "reset();" novalidate>
+                <form name = "contactInfo" class = "needs-validation" onsubmit = "return validate();" onreset = "return reset();" novalidate>
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right req" for = "name">Name:</lable>
                         <input class = "col-4 form-control" type = "text" id = "name" name = "name" placeholder = "Introvert's Name" required>
                         <div class = "col-5"></div>
                         <div class = "col-6 text-left align-self-center invalid-feedback">
-                            Name is required.
+                            Full Name is required.
                         </div>
                     </div>  <!--end of .row (name)-->
 
@@ -79,34 +82,37 @@
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right req" for = "reason">Reason for Inquiry:</lable>
                         <select class = "col-4" id = "reason" name = "reason">
-                            <option value = "catering" selected>Catering (default)</option>
-                            <option value = "party">Private Party</option>
-                            <option value = "feedback">Feedback</option>
-                            <option value = "other">Other</option>
+                            <option value = "Catering" selected>Catering (default)</option>
+                            <option value = "Private Party">Private Party</option>
+                            <option value = "Feedback">Feedback</option>
+                            <option value = "Other">Other</option>
                         </select>
                     </div> <!--end of .row (reason)-->
 
                     <div class = "form-row align-items-center">
-                        <lable class = "col-4 text-right" for = "info">Additional Information:</lable>
-                        <textarea class = "col-4" id = "info" name = "info" placeholder = "The more we know the less we all need to interact with others."></textarea>
+                        <lable class = "col-4 text-right" for = "additionalInfo">Additional Information:</lable>
+                        <textarea class = "col-4" id = "additionalInfo" name = "additionalInfo" placeholder = 'If "Other" or "Feedback" was selected, please fill out.' required></textarea>
+                        <div class = "col-6 text-left invalid-feedback">
+                            Please fill out.
+                        </div>
                     </div> <!--end of .row (additional info)-->
 
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right req" for = "patronage">Have you been to the restaurant?</lable>
-                        <div class = "col-4 text-left">
-                            <input type = "radio" name = "patronage" value = "NO" checked>No
-                            <input type = "radio" name = "patronage" value = "YES">Yes
+                        <div class = "col-4 text-left" id = "patronage">
+                            <input id = "patronageN" type = "radio" name = "patronage" value = "No" checked>No
+                            <input id = "patronageY" type = "radio" name = "patronage" value = "Yes">Yes
                         </div>
                     </div> <!--end of .row (have you ever been here before)-->
 
                     <div class = "form-row align-items-center">
-                        <lable class = "col-4 text-right" for = "time">Best days to contact you?</lable>
-                        <div class = "col-4">
-                            <input type = "checkbox" name = "time" value = "M">M
-                            <input type = "checkbox" name = "time" value = "T">T
-                            <input type = "checkbox" name = "time" value = "W">W
-                            <input type = "checkbox" name = "time" value = "T">Th
-                            <input type = "checkbox" name = "time" value = "F">F
+                        <lable class = "col-4 text-right" for = "bestTime">Best days to contact you?</lable>
+                        <div class = "col-4" id = "bestTime">
+                            <input id = "M" type = "checkbox" name = "time" value = "M">M
+                            <input id = "T" type = "checkbox" name = "time" value = "T">T
+                            <input id = "W" type = "checkbox" name = "time" value = "W">W
+                            <input id = "Th" type = "checkbox" name = "time" value = "T">Th
+                            <input id = "F" type = "checkbox" name = "time" value = "F">F
                         </div>
                     </div> <!--end of .row (best time to contact you)-->
 
@@ -114,9 +120,9 @@
                     <input class = "btn align-self-center badge-pill" id = "resetBtn" type = "reset" value = "Reset">
                 </form>
 
-                <div id = "submittedContactInfo" class = "justify-content-around" style = "display: none;">
+                <div id = "submittedInfo" class = "justify-content-around" style = "display: none;">
                     <p>Please verify your contact infromation was submitted correctly.</p>
-                    <table>
+                    <table class = "justify-content-around">
                         <tr>
                             <td>Name:</td>
                             <td id = printName></td>
