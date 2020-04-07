@@ -71,7 +71,7 @@ function validate() {
             phoneO.setCustomValidity("incorrect format");
         }
         
-        // if Other is the reason, we need additionalInfo
+        // if Feedback or Other is the reason, we need additionalInfo
         if ((reason === "Other" || reason === "Feedback") && additionalInfo === " ") {
             contactInfo.className = "was-validated";
             additionalInfoO.setCustomValidity("Need info");
