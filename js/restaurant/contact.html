@@ -51,7 +51,6 @@
                 <p class = "col-2 btn current-page"><a href = "">Contact Us</a></p>                
             </nav>
             
-            <!--If I have time I want the table to show up on the right hand side-->
             <section>
                 <form name = "contactInfo" class = "needs-validation" onsubmit = "return validate();" onreset = "return reset();" novalidate>
                     <div class = "form-row align-items-center">
@@ -74,10 +73,10 @@
 
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right  req" for = "phone">Phone:</lable>
-                        <input class = "col-4 form-control" type = "text" id = "phone" name = "phone" placeholder = "##########" required>
+                        <input class = "col-4 form-control" type = "text" id = "phone" name = "phone" placeholder = "###-###-####" required>
                         <div class = "col-5"></div>
                         <div class = "col-6 text-left invalid-feedback">
-                            Phone number is required. Do not include spaces or dashes. We promise to text first.
+                            Phone number is required. We promise to text first.
                         </div>
                     </div> <!--end of .row (phone)-->
 
@@ -93,7 +92,8 @@
                     
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right" for = "additionalInfo">Additional Information:</lable>
-                        <textarea class = "col-4 from-control" id = "additionalInfo" name = "additionalInfo" rows = "4" placeholder = 'If "Feedback" or "Other" was selected, please fill out.' required></textarea>
+                        <textarea class = "col-4 from-control" id = "additionalInfo" name = "additionalInfo" rows = "4" placeholder = 'If "Feedback" or "Other" was selected, please fill out.'></textarea>
+                        <div class = "col-5"></div>
                         <div class = "col-6 text-left invalid-feedback">
                             Please fill out.
                         </div>
@@ -121,43 +121,43 @@
                     <input class = "btn align-self-center badge-pill" id = "submitBtn" type = "submit" value = "Send Request">
                     <input class = "btn align-self-center badge-pill" id = "resetBtn" type = "reset" value = "Reset">
                 </form>
-            </section> <!--end of form-->
 
-            <section>
                 <div id = "submittedInfo" class = "justify-content-around" style = "display: none;">
                     <p>Please verify your contact infromation was submitted correctly.</p>
-                    <table class = "justify-content-around">
-                        <tr>
-                            <td>Name:</td>
-                            <td id = printName></td>
-                        </tr>
-                        <tr>
-                            <td>Email:</td>
-                            <td id = printEmail></td>
-                        </tr>
-                        <tr>
-                            <td>Phone:</td>
-                            <td id = printPhone></td>
-                        </tr>
-                        <tr>
-                            <td>Reason for Inquiry:</td>
-                            <td id = printReason></td>
-                        </tr>
-                        <tr>
-                            <td>Additional Information:</td>
-                            <td id = printAdditionalInfo></td>
-                        </tr>
-                        <tr>
-                            <td>Have you ever been here before:</td>
-                            <td id = printPatronage></td>
-                        </tr>
-                        <tr style = "border-bottom: none;">
-                            <td>Best times to contact you:</td>
-                            <td id = printBestTime></td>
-                        </tr>
-                    </table>
-                </div>
-            </section> <!--end of table-->
+                    <div class = "row justify-content-around">
+                        <table>
+                            <tr>
+                                <td>Name:</td>
+                                <td id = printName></td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td id = printEmail></td>
+                            </tr>
+                            <tr>
+                                <td>Phone:</td>
+                                <td id = printPhone></td>
+                            </tr>
+                            <tr>
+                                <td>Reason for Inquiry:</td>
+                                <td id = printReason></td>
+                            </tr>
+                            <tr>
+                                <td>Additional Information:</td>
+                                <td id = printAdditionalInfo></td>
+                            </tr>
+                            <tr>
+                                <td>Have you ever been here before:</td>
+                                <td id = printPatronage></td>
+                            </tr>
+                            <tr style = "border-bottom: none;">
+                                <td>Best times to contact you:</td>
+                                <td id = printBestTime></td>
+                            </tr>
+                        </table>
+                    </div> <!--end of .row-->
+                </div> <!--end of #submiitedinfo-->
+            </section>
 
             <footer class = "display-5">
                 <h4>6 Summerhouse Street, Freeport, NY 11520</h4>

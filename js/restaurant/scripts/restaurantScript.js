@@ -8,7 +8,6 @@
     reset button
 
     name should be wrong if there are numbers
-    phone number should except ###-###-####
     best time to have "and"
 
     alert button needs to have a no button that resets everything
@@ -28,6 +27,7 @@ function validate() {
     emailO.setCustomValidity("");
     phoneO.setCustomValidity("");
     additionalInfoO.setCustomValidity("");
+    
     submittedInfo.style.display = "none";                               // reset the info box
 
     var name = nameO.value;                                             // get values as a string
@@ -35,18 +35,19 @@ function validate() {
     var phone = phoneO.value;
     var reason = reasonO.value;
     var additionalInfo = additionalInfoO.value;
-    var patronage = "";
-    var bestTime = "";
-
-    // document.getElementById("additionalInfo").innerText = " ";          // in case it wasn't filled out
+    var patronage = null;
+    var bestTime = null;
 
     if (!contactInfo.checkValidity()) {                                 // the form was filled out
+        document.getElementById("additionalInfo").innerText = additionalInfo;
         contactInfo.className = "was-validated";
-        additionalInfoO.setCustomValidity("");
-        // document.getElementById("additionalInfo").innerText = additionalInfo;
         return false;
 
     } else {
+
+        console.log(additionalInfo);
+        console.log(document.getElementById("additionalInfo").innerText);
+
         // checking name is a full name. If it doesn't exist the indexOf returns -1
         if (name.indexOf(" ") == -1) {
             contactInfo.className = "was-validated";
@@ -80,17 +81,53 @@ function validate() {
             return false;
         }
 
-        // check phone number is ###-###-#### or 10 digits
-        if (phone.length != 10) {
+        // check phone number is ###-###-#### or 10 digits without dashes
+        if (phone.length == 10 && isNaN(phone)) {                       // if 10 long and not a number
+            contactInfo.className = "was-validated";
             phoneO.setCustomValidity("incorrect format");
+
+        } else if (phone.length == 12) {                                // 12 is the amount of characters in ###-###-####
+            var dash1 = 0;
+            var dash2 = 0;
+            var firstNum = 0;
+            var secondNum = 0;
+            var thirdNum = 0;
+
+            for (var i = 0; i < phone.length; i++){
+                if (phone[i] == "-" && dash1 == 0) {
+                    dash1 = i;
+                } else if (phone[i] == "-" && dash1 != 0 && dash2 == 0) {
+                    dash2 = i;
+                } else if (dash1 == 0) {
+                    firstNum++;
+                } else if (dash1 != 0 && dash2 == 0) {
+                    secondNum++;
+                } else if (dash1 != 0 && dash2 != 0) {
+                    thirdNum++;
+                }
+            }
+
+            // check it's a ###-###-#### string
+            if (firstNum != 3 && secondNum != 3 && thirdNum != 4 && dash1 != 3 && dash2 != 7) {
+                phoneO.setCustomValidity("incorrect format");
+                contactInfo.className = "was-validated";
+            } else if (phone.slice(dah2 + 1).indexOf("-") != -1) {
+                phoneO.setCustomValidity("incorrect format");
+                contactInfo.className = "was-validated";
+            } else if (isNaN(phone.slice(9)) || isNaN(phone.slice(4, 7)) || isNaN(phone.slice(0, -7))) {
+                phoneO.setCustomValidity("incorrect format");
+                contactInfo.className = "was-validated";
+            }
+
+        } else if (phone.length > 10 || phone.length < 10) {            // if the phone number isn't 10 or 12 long then it needs to get caught here.
+            phoneO.setCustomValidity("incorrect format");
+            contactInfo.className = "was-validated";
         }
-        
+
         // if Feedback or Other is the reason, we need additionalInfo
         if ((reason === "Other" || reason === "Feedback") && additionalInfo === "") {
-            contactInfo.className = "was-validated";
             additionalInfoO.setCustomValidity("Need info");
-            // document.getElementById("additionalInfo").innerText = "";
-
+            contactInfo.className = "was-validated";
             return false;
         }
 
@@ -138,21 +175,24 @@ function validate() {
         document.getElementById("printPatronage").innerText = patronage;
         document.getElementById("printBestTime").innerText = bestTime;
 
-        // document.getElementById("additionalInfo").innerText = additionalInfo; // reseting the form input
-        
-        alert("Events involve other people, are you sure?");
-        submittedInfo.style.display = "block";                           // display user inputs
+        var areYouSure = confirm("Events involve other people, are you sure?");
+
+        if (areYouSure) {
+            submittedInfo.style.display = "block";                          // display user inputs
+        } else {
+            contactInfo.reset();
+        }
     }
     return false;
 }
 
 function reset() {
-    // name.setCustomValidity("");                                         // resets validation
-    // email.setCustomValidity("");
-    // phone.setCustomValidity("");
-    // additionalInfo.setCustomValidity("");
+    nameO.setCustomValidity("");                                         // resets validation
+    emailO.setCustomValidity("");
+    phoneO.setCustomValidity("");
+    additionalInfoO.setCustomValidity("");
+
     contactInfo.className = "needs-validation";
-    // document.getElementById("additionalInfo").innerText = "";
 
     contactInfo.reset();                                                // resets form
     submittedInfo.style.display = "none";                               // removes user inputs
