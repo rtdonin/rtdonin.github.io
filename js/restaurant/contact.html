@@ -34,6 +34,7 @@
             .badge-pill:active {
                 border: none;
             }
+
         </style>
         <title>Contact Us</title>
     </head>
@@ -50,13 +51,14 @@
                 <p class = "col-2 btn current-page"><a href = "">Contact Us</a></p>                
             </nav>
             
+            <!--If I have time I want the table to show up on the right hand side-->
             <section>
                 <form name = "contactInfo" class = "needs-validation" onsubmit = "return validate();" onreset = "return reset();" novalidate>
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right req" for = "name">Name:</lable>
                         <input class = "col-4 form-control" type = "text" id = "name" name = "name" placeholder = "Introvert's Name" required>
                         <div class = "col-5"></div>
-                        <div class = "col-6 text-left align-self-center invalid-feedback">
+                        <div class = "col-5 text-left align-self-center invalid-feedback">
                             Full Name is required.
                         </div>
                     </div>  <!--end of .row (name)-->
@@ -88,10 +90,10 @@
                             <option value = "Other">Other</option>
                         </select>
                     </div> <!--end of .row (reason)-->
-
+                    
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right" for = "additionalInfo">Additional Information:</lable>
-                        <textarea class = "col-4" id = "additionalInfo" name = "additionalInfo" placeholder = 'If "Other" or "Feedback" was selected, please fill out.' required></textarea>
+                        <textarea class = "col-4 from-control" id = "additionalInfo" name = "additionalInfo" rows = "4" placeholder = 'If "Feedback" or "Other" was selected, please fill out.' required></textarea>
                         <div class = "col-6 text-left invalid-feedback">
                             Please fill out.
                         </div>
@@ -119,7 +121,9 @@
                     <input class = "btn align-self-center badge-pill" id = "submitBtn" type = "submit" value = "Send Request">
                     <input class = "btn align-self-center badge-pill" id = "resetBtn" type = "reset" value = "Reset">
                 </form>
+            </section> <!--end of form-->
 
+            <section>
                 <div id = "submittedInfo" class = "justify-content-around" style = "display: none;">
                     <p>Please verify your contact infromation was submitted correctly.</p>
                     <table class = "justify-content-around">
@@ -153,7 +157,7 @@
                         </tr>
                     </table>
                 </div>
-            </section> 
+            </section> <!--end of table-->
 
             <footer class = "display-5">
                 <h4>6 Summerhouse Street, Freeport, NY 11520</h4>

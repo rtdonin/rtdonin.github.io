@@ -18,7 +18,9 @@ var answerBtnId;
 
 function question() {
     yikes.style.display = "none";
-    index = Math.floor(Math.random() * animals.length);                     // answer
+    document.getElementById("start").innerText = "Start";
+
+    var index = Math.floor(Math.random() * animals.length);                     // answer
     document.getElementById("animalName").innerText = animals[index][0];    // insets the name of the animal in the question
 
     var answerBtn = Math.floor(Math.random() * 4);  // the button for our answer
@@ -45,13 +47,12 @@ function question() {
 }
 
 function rightOrWrong() {
-    var choice = this.id;
-    
-    if (choice == answerBtnId) {
+    if (this.id == answerBtnId) {
         question();
     } else {
         game.style.display = "none";
         yikes.style.display = "block";
+        document.getElementById("start").innerText = "Reset";
     }
 
 }

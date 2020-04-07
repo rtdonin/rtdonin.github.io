@@ -20,7 +20,6 @@ body {
     font-family: "Times New Roman", Times, serif;
     background-color: #08182c;
     text-align: center;
-    flex-wrap: wrap;
     margin: 5%;
 }
 
@@ -35,6 +34,7 @@ h1, h2, h3, footer {
     background: #08182C;
     color: #EDF6FC;
     border: #CBC0A8 thick solid;
+    overflow-wrap: break-word;
 }
 
 section {
@@ -48,6 +48,7 @@ section {
 header {
     margin: 3% 10%;
     color: #08182C;
+    overflow-wrap: break-word;
 }
 
 footer {
@@ -62,20 +63,19 @@ h2, h3 {
     text-align: center;
 }
 
+/* removing set anchor styling */
 a {
     text-decoration-line: unset;
     color: unset;
 }
-
 a:hover {
     text-decoration-line: unset;
     color: unset;
 }
 
-/* nav btn styling*/
+/* nav btn styling */
 nav {
     padding: 0 2%;
-
 }
 .btn {
     color: #EDF6FC;
@@ -111,14 +111,12 @@ table {
     margin: 3%;
     padding: 2%;
 }
-
 td{
     margin: 3%;
     padding: 2%;
     text-align: left;
     font-size: large;
 }
-
 tr {
     margin: 2%;
     padding: 3%;

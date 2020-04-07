@@ -2,6 +2,16 @@
     Name: Margaret Donin
     Date Created: 04/05/20
     Most recent revision: 
+
+    To Do:
+    fix addtional info situation
+    reset button
+
+    name should be wrong if there are numbers
+    phone number should except ###-###-####
+    best time to have "and"
+
+    alert button needs to have a no button that resets everything
 */
 
 function validate() {
@@ -18,8 +28,9 @@ function validate() {
     emailO.setCustomValidity("");
     phoneO.setCustomValidity("");
     additionalInfoO.setCustomValidity("");
+    submittedInfo.style.display = "none";                               // reset the info box
 
-    var name = nameO.value;                                         // get values as a string
+    var name = nameO.value;                                             // get values as a string
     var email = emailO.value;
     var phone = phoneO.value;
     var reason = reasonO.value;
@@ -27,11 +38,14 @@ function validate() {
     var patronage = "";
     var bestTime = "";
 
-    document.getElementById("additionalInfo").innerText = " "; // in case it wasn't filled out
+    // document.getElementById("additionalInfo").innerText = " ";          // in case it wasn't filled out
 
     if (!contactInfo.checkValidity()) {                                 // the form was filled out
         contactInfo.className = "was-validated";
+        additionalInfoO.setCustomValidity("");
+        // document.getElementById("additionalInfo").innerText = additionalInfo;
         return false;
+
     } else {
         // checking name is a full name. If it doesn't exist the indexOf returns -1
         if (name.indexOf(" ") == -1) {
@@ -66,19 +80,21 @@ function validate() {
             return false;
         }
 
-        // check phone number
+        // check phone number is ###-###-#### or 10 digits
         if (phone.length != 10) {
             phoneO.setCustomValidity("incorrect format");
         }
         
         // if Feedback or Other is the reason, we need additionalInfo
-        if ((reason === "Other" || reason === "Feedback") && additionalInfo === " ") {
+        if ((reason === "Other" || reason === "Feedback") && additionalInfo === "") {
             contactInfo.className = "was-validated";
             additionalInfoO.setCustomValidity("Need info");
+            // document.getElementById("additionalInfo").innerText = "";
+
             return false;
         }
 
-        // check patronage
+        // get patronage
         if (document.getElementById("patronageN").checked) {
             patronage = "No";
         } else {
@@ -90,17 +106,30 @@ function validate() {
             bestTime += "Monday";
         }
         if (document.getElementById("T").checked) {
+            if (bestTime.length > 0) {
+                bestTime += ","
+            }
             bestTime += " Tuesday";
         }
         if (document.getElementById("W").checked) {
+            if (bestTime.length > 0) {
+                bestTime += ","
+            }
             bestTime += " Wednesday";
         }
         if (document.getElementById("Th").checked) {
+            if (bestTime.length > 0) {
+                bestTime += ","
+            }
             bestTime += " Thursday";
         }
         if (document.getElementById("F").checked) {
+            if (bestTime.length > 0) {
+                bestTime += ","
+            }
             bestTime += " Friday";
         }
+
         document.getElementById("printName").innerText = name;          // put user inputs in the table
         document.getElementById("printEmail").innerText = email;
         document.getElementById("printPhone").innerText = phone;
@@ -109,20 +138,22 @@ function validate() {
         document.getElementById("printPatronage").innerText = patronage;
         document.getElementById("printBestTime").innerText = bestTime;
 
-        document.getElementById("additionalInfo").innerText = additionalInfo; // reseting the form input
+        // document.getElementById("additionalInfo").innerText = additionalInfo; // reseting the form input
         
         alert("Events involve other people, are you sure?");
-        submittedInfo.style.display = "block";                              // display user inputs
+        submittedInfo.style.display = "block";                           // display user inputs
     }
     return false;
 }
 
 function reset() {
-    contactInfo.className = "needs-validation";                         // resets validation
-    name.setCustomValidity("");
-    email.setCustomValidity("");
-    phone.setCustomValidity("");
-    additionalInfo.setCustomValidity("");            
+    // name.setCustomValidity("");                                         // resets validation
+    // email.setCustomValidity("");
+    // phone.setCustomValidity("");
+    // additionalInfo.setCustomValidity("");
+    contactInfo.className = "needs-validation";
+    // document.getElementById("additionalInfo").innerText = "";
+
     contactInfo.reset();                                                // resets form
-    submittedInfo.style.display = "block";                              // display user inputs
+    submittedInfo.style.display = "none";                               // removes user inputs
 }

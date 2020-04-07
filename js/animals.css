@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body {
- background-image: url(https://cdn.pixabay.com/photo/2015/11/10/19/39/leaves-1037624_960_720.jpg);
+    background-image: url(https://cdn.pixabay.com/photo/2015/11/10/19/39/leaves-1037624_960_720.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -9,9 +9,9 @@ body {
     
 }
 
-header{
+h1 {
     text-align:center;
-    font-family:"font-family: 'Gotu',sans-serif";
+    font-family: 'Lobster', cursive;
     color: rgb(167, 112, 112);
 }
 
@@ -25,5 +25,6 @@ header{
 }
 
 img {
-    max-width: 300px;
+    max-width: 250px;
+    max-height: 250px;
 }
