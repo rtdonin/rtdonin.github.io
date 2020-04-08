@@ -1,7 +1,7 @@
 <!--
     Name: Margaret Donin
     Date Created: 03/24/20
-    Most recent revision: 04/05/20
+    Most recent revision: 04/08/20
 
     08182C dark blue
     166975 lighter blue
@@ -35,12 +35,19 @@
                 border: none;
             }
 
+            #invalidTextarea{
+                width: 100%;
+                margin-top: .25rem;
+                font-size: 80%;
+                color: #dc3545;
+            }
+
         </style>
         <title>Contact Us</title>
     </head>
     <body>
-        <noscipt>Please enable JavaScript for optimal viewing of this page.</noscipt>
         <div class = "container">
+            <noscript><img class = "missingJS" src = "images/stop-sign.png" />This page is best viewed with JavaScript enabled.</noscript>
             <!--title-->
             <header>
                 <h1 class = "display-1">Introverts Bar</h1>
@@ -53,7 +60,7 @@
             </nav>
             
             <section>
-                <form name = "contactInfo" class = "needs-validation" onsubmit = "return validate();" onreset = "return reset();" novalidate>
+                <form name = "contactInfo" class = "needs-validation" onsubmit = "return validate();" onreset = "return resetForm();" novalidate>
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right req" for = "name">Name:</lable>
                         <input class = "col-5 form-control" type = "text" id = "name" name = "name" placeholder = "Introvert's Name" required>
@@ -95,7 +102,7 @@
                         <lable class = "col-4 text-right" for = "additionalInfo">Additional Information:</lable>
                         <textarea class = "col-5 from-control" id = "additionalInfo" name = "additionalInfo" rows = "4" placeholder = 'If "Feedback" or "Other" was selected, please fill out.'></textarea>
                         <div class = "col-5"></div>
-                        <div class = "col-6 text-left invalid-feedback">
+                        <div class = "col-6 text-left" id = "invalidTextarea" style = "display: none;">
                             Please fill out.
                         </div>
                     </div> <!--end of .row (additional info)-->
@@ -119,7 +126,7 @@
                         </div>
                     </div> <!--end of .row (best time to contact you)-->
 
-                    <input class = "btn align-self-center badge-pill" id = "submitBtn" type = "submit" value = "Send Request">
+                    <input class = "btn align-self-center badge-pill" id = "submitBtn" type = "submit" value = "Submit Request">
                     <input class = "btn align-self-center badge-pill" id = "resetBtn" type = "reset" value = "Reset">
                 </form>
 

@@ -1,12 +1,11 @@
 /*
     Name: Margaret Donin
     Date Created: 04/05/20
-    Most recent revision: 
+    Most recent revision: 04/08/20 
 
-    To Do:
-    fix addtional info situation -> goes into if statement, does not give error message
-    reset button -> not resetting anything
-    tell user JavaScript needs to be enableded.
+    To optomize:
+    * resetting the form
+    * why my textarea invalid-feedback wasn't working.
 */
 
 function validate() {
@@ -22,9 +21,6 @@ function validate() {
     nameO.setCustomValidity('');
     emailO.setCustomValidity('');
     phoneO.setCustomValidity('');
-    additionalInfoO.setCustomValidity('');
-    
-    submittedInfo.style.display = "none"; // reset the info box
 
     var name = nameO.value;         // get values as a string
     var email = emailO.value;
@@ -33,6 +29,10 @@ function validate() {
     var additionalInfo = additionalInfoO.value;
     var patronage = null;
     var bestTime = "";              // can not set it to null. JS will print 'nullMonday'
+
+    // additionalInfoO.required = false;       // resetting the attribute, wasn't working right.
+    invalidTextarea.style.display = "none";
+    submittedInfo.style.display = "none";   // hide the info box
 
     // checking name is a full name. indexOf returns -1 if the argument isnt found.
     // everyone has a first and last name. There is a space between the names.
@@ -114,9 +114,9 @@ function validate() {
     }
 
     // if Feedback or Other is the reason, we need additionalInfo
-    if ((reason === "Other" || reason === "Feedback") && additionalInfo === "") {
-        console.log("add info is empty");
-        additionalInfoO.setCustomValidity("Need info");
+    if ((reason == "Other" || reason == "Feedback" ) && additionalInfo == "") {
+        // additionalInfoO.required = true;     // not working right now.
+        invalidTextarea.style.display = "block";
         contactInfo.className = "was-validated";
         return false;
     }
@@ -132,8 +132,9 @@ function validate() {
     document.getElementById("patronageN").checked ? patronage = "No": patronage = "Yes";
 
     // best time to contact
-    // All the days will be kept in an array and printed out that way.
+    // all the days will be kept in an array and printed out that way.
     var day = [];
+
     if (document.getElementById("M").checked) {
         day.push("Monday");
     }
@@ -150,12 +151,12 @@ function validate() {
         day.push("Friday");
     }
 
-    switch (day.legnth) {
+    switch (day.length) {
         case 0: bestTime = "We will contact you as soon as we can muster up the energy to people.";
             break;
-        case 1: bestTime = day[i];
+        case 1: bestTime = day[0];
             break;
-        case 2: bestTime = day[0] + " and " + bestTime[1];
+        case 2: bestTime = day[0] + " and " + day[1];
             break;
         default:
             for (var i = 0; i < day.length; i++) {
@@ -176,24 +177,42 @@ function validate() {
     document.getElementById("printPatronage").innerText = patronage;
     document.getElementById("printBestTime").innerText = bestTime;
 
-    // confirm out introvert is ready to interact with people.
+    // confirm our introvert is ready to interact with people.
     // if ready to interact with people, display the table with the data.
     confirm("Events involve other people, are you sure?") ? submittedInfo.style.display = "block" : contactInfo.reset();
 
     return false;
 }
 
-function reset() {
-    // hides users input
-    submittedInfo.style.display = "none";
+function resetForm() {
+    console.log("reset button was clicked");
+    var contactInfoII = document.forms["contactInfo"];
 
-    // reset validations.
-    nameO.setCustomValidity('');
-    emailO.setCustomValidity('');
-    phoneO.setCustomValidity('');
-    additionalInfoO.setCustomValidity('');
-    contactInfo.className = "needs-validation";
+    document.getElementById("name").setCustomValidity('');      // reset validations
+    document.getElementById("email").setCustomValidity('');
+    document.getElementById("phone").setCustomValidity('');
+    document.getElementById("reason").setCustomValidity('');
+    contactInfoII.className = "needs-validation";
 
-    // reset the form
-    contactInfo.reset();
+    document.getElementById("name").value = "";     // reset values ideally form.reset(); would work. but it didn't
+    document.getElementById("email").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("reason").value = "Catering";
+    document.getElementById("additionalInfo").value = "";
+    document.getElementById("patronageN").checked = true;
+    document.getElementById("patronageY").checked = false;
+    document.getElementById("M").checked = false;
+    document.getElementById("T").checked = false;
+    document.getElementById("W").checked = false;
+    document.getElementById("Th").checked = false;
+    document.getElementById("F").checked = false;
+
+    document.getElementById("submittedInfo").style.display = "none";       // hides users input
+    // document.getElementById("additionalInfo").required = false;       // reset the attribute not working right.
+    invalidTextarea.style.display = "none";
+
+    // contactInfoII.reset(); // should be resetting my form
+    document.getElementById("name").focus();
+
+    return false;
 }

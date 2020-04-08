@@ -14,8 +14,7 @@
 Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/
 */
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css");
-@import url("https://fonts.googleapis.com/css?family=Amatic+SC&display=swap"); 
-@import url("https://kit.fontawesome.com/a076d05399.js");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC&display=swap");
 
 body {
     font-family: "Times New Roman", Times, serif;
@@ -129,4 +128,8 @@ i {
 }
 i:hover {
     color: #08182C;
+}
+
+.missingJS {
+    max-width: 300px;
 }
