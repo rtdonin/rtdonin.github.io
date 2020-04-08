@@ -14,9 +14,9 @@
     <head>
         <meta charset = "utf-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <link rel = "stylesheet" href = "styles/restaurantStyles.css" type = "text/css">
 
+        <link rel = "stylesheet" href = "styles/restaurantStyles.css" type = "text/css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <style>
             label, input, select, textarea {
                 margin: 3%;
@@ -39,6 +39,7 @@
         <title>Contact Us</title>
     </head>
     <body>
+        <noscipt>Please enable JavaScript for optimal viewing of this page.</noscipt>
         <div class = "container">
             <!--title-->
             <header>
@@ -46,7 +47,7 @@
             </header>
 
             <nav class = "row justify-content-start">
-                <p class = "col-2 btn"><a href = "index.html">Home</a></p>
+                <p class = "col-2 btn"><a href = "index.html"><i class='fas fa-home'></i></a></p>
                 <p class = "col-2 btn"><a href = "menu.html">Menu</a></p>
                 <p class = "col-2 btn current-page"><a href = "">Contact Us</a></p>                
             </nav>
@@ -55,7 +56,7 @@
                 <form name = "contactInfo" class = "needs-validation" onsubmit = "return validate();" onreset = "return reset();" novalidate>
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right req" for = "name">Name:</lable>
-                        <input class = "col-4 form-control" type = "text" id = "name" name = "name" placeholder = "Introvert's Name" required>
+                        <input class = "col-5 form-control" type = "text" id = "name" name = "name" placeholder = "Introvert's Name" required>
                         <div class = "col-5"></div>
                         <div class = "col-5 text-left align-self-center invalid-feedback">
                             Full Name is required.
@@ -64,7 +65,7 @@
 
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right req" for = "email">Email:</lable>
-                        <input class = "col-4 form-control" type = "text" id = "email" name = "email" placeholder = "staying@home.com" required>
+                        <input class = "col-5 form-control" type = "text" id = "email" name = "email" placeholder = "staying@home.com" required>
                         <div class = "col-5"></div>
                         <div class = "col-6 text-left invalid-feedback">
                             Email is required.
@@ -73,7 +74,7 @@
 
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right  req" for = "phone">Phone:</lable>
-                        <input class = "col-4 form-control" type = "text" id = "phone" name = "phone" placeholder = "###-###-####" required>
+                        <input class = "col-5 form-control" type = "text" id = "phone" name = "phone" placeholder = "###-###-####" required>
                         <div class = "col-5"></div>
                         <div class = "col-6 text-left invalid-feedback">
                             Phone number is required. We promise to text first.
@@ -82,7 +83,7 @@
 
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right req" for = "reason">Reason for Inquiry:</lable>
-                        <select class = "col-4" id = "reason" name = "reason">
+                        <select class = "col-5" id = "reason" name = "reason">
                             <option value = "Catering" selected>Catering (default)</option>
                             <option value = "Private Party">Private Party</option>
                             <option value = "Feedback">Feedback</option>
@@ -92,7 +93,7 @@
                     
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right" for = "additionalInfo">Additional Information:</lable>
-                        <textarea class = "col-4 from-control" id = "additionalInfo" name = "additionalInfo" rows = "4" placeholder = 'If "Feedback" or "Other" was selected, please fill out.'></textarea>
+                        <textarea class = "col-5 from-control" id = "additionalInfo" name = "additionalInfo" rows = "4" placeholder = 'If "Feedback" or "Other" was selected, please fill out.'></textarea>
                         <div class = "col-5"></div>
                         <div class = "col-6 text-left invalid-feedback">
                             Please fill out.
@@ -101,7 +102,7 @@
 
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right req" for = "patronage">Have you been to the restaurant?</lable>
-                        <div class = "col-4 text-left" id = "patronage">
+                        <div class = "col-5 text-left" id = "patronage">
                             <input id = "patronageN" type = "radio" name = "patronage" value = "No" checked>No
                             <input id = "patronageY" type = "radio" name = "patronage" value = "Yes">Yes
                         </div>
@@ -109,7 +110,7 @@
 
                     <div class = "form-row align-items-center">
                         <lable class = "col-4 text-right" for = "bestTime">Best days to contact you?</lable>
-                        <div class = "col-4" id = "bestTime">
+                        <div class = "col-5" id = "bestTime">
                             <input id = "M" type = "checkbox" name = "time" value = "M">M
                             <input id = "T" type = "checkbox" name = "time" value = "T">T
                             <input id = "W" type = "checkbox" name = "time" value = "W">W
@@ -125,7 +126,7 @@
                 <div id = "submittedInfo" class = "justify-content-around" style = "display: none;">
                     <p>Please verify your contact infromation was submitted correctly.</p>
                     <div class = "row justify-content-around">
-                        <table>
+                        <table class = "col-8">
                             <tr>
                                 <td>Name:</td>
                                 <td id = printName></td>
