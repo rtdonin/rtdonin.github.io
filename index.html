@@ -2,6 +2,7 @@
     Name: Margaret Donin
     Date Created: 3/24/20
     Most recent revision: 3/28/20
+    Most recent revision: 11/15/20
 
     F4F6F6 off white
     BC8F8F rosybrown
@@ -26,55 +27,82 @@
 
         #everything {
             background-color: rgba(244, 246, 246, 0.63);
-            border: #F4F6F6 solid 2px;
             border-radius: 20px;
+            box-shadow: 1px 1px 20px 1px rgba(244, 246, 246, 0.63);
         }
 
-        .jumbotron {
-            background-color: #78db7d5b;
-            border: #424F48 dotted 2px;
+        h1 {
+            font-size: 300%;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1;
         }
 
         main,
         header,
         footer {
-            margin: 10%;
-            padding: 5%;
+            margin: 5% 3%;
+            padding: 3%;
         }
+
+        header>div>.btn, .email {
+            color: #AB445B;
+        }
+
+        header>div>.btn:hover, .email:hover {
+            color: #93859B;
+        }
+
+        .btn:hover {
+            background-color: #f8f9fa;
+        }
+
+        .btn {
+            color: #424F48;
+        }
+
     </style>
 </head>
 
 <body>
-    <div id="everything" class="container d-flex flex-column">
-        <header class="jumbotron">
-            <h1 class="row display-4 text-center">Welcome!</h1>
+    <div id="everything" class="container d-flex flex-column justify-content-center">
+        <header>
+            <h1 class="row justify-content-center text-center">Margaret Donin</h1>
 
-            <div class="row justify-content-between">
-                <a class="col-3 btn btn-light m-2" href="https://rtdonin.wordpress.com">Wordpress</a>
-                <a class="col-3 btn btn-light m-2" href="https://github.com/rtdonin">GitHub</a>
-                <a class="col-3 btn btn-light m-2" href="https://www.linkedin.com/in/margaret-donin/">LinkedIn</a>
+            <div class="row justify-content-around p-3">
+                <a class="col-lg-2 col-md-3 col-sm-5 btn btn-light m-2"
+                    href="https://rtdonin.wordpress.com">Wordpress</a>
+                <a class="col-lg-2 col-md-3 col-sm-5 btn btn-light m-2" href="https://github.com/rtdonin">GitHub</a>
+                <a class="col-lg-2 col-md-3 col-sm-5 btn btn-light m-2"
+                    href="https://www.linkedin.com/in/margaret-donin/">LinkedIn</a>
             </div>
         </header>
 
         <main class="row container flex-column">
-            <article class="row d-flex justify-content-between">
-                <h3 class="col-8">JavaScript Project</h3>
+            <article class="row d-flex justify-content-around">
+                <h2 class="col-4 align-self-top text-right">JavaScript Project</h2>
                 <div class="col-4">
-                    <a class="btn btn-light m-4" href="js/restaurant/index.html">Restaurant</a>
+                    <a class="btn btn-light m-2" href="js/restaurant/index.html">Restaurant</a>
                 </div>
             </article>
 
-            <article class="row d-flex justify-content-between">
-                <h3 class="col-8">Java Projects</h3>
+            <article class="row d-flex justify-content-around">
+                <h2 class="col-4 align-self-top text-right">Java Projects</h2>
                 <div class="col-4">
-                    <a class="btn btn-light m-4" href="">To be linked</a>
+                    <a class="btn btn-light m-2" href="">To be linked</a>
                 </div>
-
             </article>
         </main>
 
         <footer>
-            <div class="text-center">Margaret Donin's Recent Projects</div>
+            <div class="text-center">
+                <a class="email" href="mailto: rtdonin@gmail.com?subject=From%20Your%20Landing%20Page">Contact me</a>
+            </div>
         </footer>
     </div>
 
