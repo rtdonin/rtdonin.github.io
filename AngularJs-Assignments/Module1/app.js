@@ -9,7 +9,14 @@
     function LunchCheckController($scope) {
 
         $scope.checkLunch = function () {
-            const lunchItems = $scope.lunch.split(",");
+            const lunchString = $scope.lunch;
+
+            if (lunchString == null) {
+                $scope.message = "Please enter data first";
+                return;
+            }
+
+            const lunchItems = lunchString.split(",");
             let numberItems = 0;
 
             for (let i = 0; i < lunchItems.length; i++) {
