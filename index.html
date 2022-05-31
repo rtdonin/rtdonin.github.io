@@ -28,118 +28,199 @@
 <body class="container">
 
     <!-- Navigation Bar -->
-    <nav class="navbar row">
-        <a class="p-2 m-2" href="projects.html" target="_blank"><button class="btn">Projects</button></a>
-        <a class="p-2 m-2" href="https://www.linkedin.com/in/margaret-donin/" target="_blank"><button
-                class="btn">LinkedIn</button></a>
-        <a class="p-2 m-2" href="https://github.com/rtdonin" target="_blank"><button class="btn">GitHub</button></a>
-        <a class="p-2 m-2" href="https://rtdonin.wordpress.com" target="_blank"><button
-                class="btn">Wordpress</button></a>
-        <a class="p-2 m-2" href="resume.pdf" download="DoninMargaret_resume.pdf" target="_blank"><button
-                class="btn">Resume</button></a>
-        <a class="p-2 m-2" href="mailto: rtdonin@gmail.com?subject=Hello%20From%20Your%20Landing%20Page!"
-            target="_blank"><button class="btn">E-mail</button></a>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--START COLLAPSE-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html" target="_blank">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/margaret-donin/" target="_blank">LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/rtdonin" target="_blank">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resume.pdf" download="DoninMargaret_resume.pdf" target="_blank">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/margaret-donin/" target="_blank">LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto: rtdonin@gmail.com?subject=Hello%20From%20Your%20Landing%20Page!"
+                        target="_blank">Email</a>
+                </li>
+            </ul>
+        </div>
+        <!--End COLLAPSE-->
+
     </nav>
     <!-- end nav bar -->
 
     <!-- About Me -->
-    <div id="about-me" class="m-2 p-2 row">
-        <div class="container m-2">
-            <h1 class="text-lg-left text-md-left text-sm-center">Margaret Donin</h1>
-            <h2 class="text-center">Full Stack Software Developer</h2>
+    <div class="m-2 p-2 container">
+        <h1 class="row justify-content-left">Margaret Donin</h1>
+        <h2 class="row justify-content-center">Full Stack Software Developer</h2>
+
+        <div class="row justify-content-between d-flex">
+            <!--START ACCORDIONS  -->
+            <div id="accordionEDU" class="col">
+                <!-- START EDUCATION -->
+                <div class="card">
+
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Education
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionEDU">
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">New York University<br />Tandon School of Engineering
+                                    <ul>
+                                        <li>Bachelor of Science</li>
+                                        <li>Biomolecular Sciences</li>
+                                        <li><a href="https://www.nyu.edu/registrar/forms-procedures/electronic-diploma-validation.html"
+                                                target="_blank">See
+                                                Credential</a><br />Use Credential ID 22P3-9BYS-MSNQ</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">University of California, Irvine
+                                    <ul>
+                                        <li>Coursera Certificate</li>
+                                        <li>Getting Started with Go</li>
+                                        <li><a href="https://coursera.org/share/8799b285994d76499065d7c7c61ff141"
+                                                target="_blank">Show
+                                                Credential</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">University of Michigan
+                                    <ul>
+                                        <li>Coursera Certificate</li>
+                                        <li>Building Web Applications in Django</li>
+                                        <li><a href="https://coursera.org/share/e6327aae486f76ab9a653a9b2e606e87"
+                                                target="_blank">Show
+                                                Credential</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">University of Michigan
+                                    <ul>
+                                        <li>Coursera Certificate</li>
+                                        <li>Web Application Technologies and Django</li>
+                                        <li><a href="https://coursera.org/share/fcba8bdd1fe31704f93fa30800f1c14b"
+                                                target="_blank">Show
+                                                Credential</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">LaGuardia Community College
+                                    <ul>
+                                        <li>Software Guild Certificate</li>
+                                        <li> Web Development Bootcamp - Java</li>
+                                        <li><a href="https://www.credly.com/badges/7b52281a-e064-490b-9368-cad8f7a5f608/public_url"
+                                                target="_blank">Show
+                                                Credential</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- END EDUCATION -->
+            <!-- START SKILLS -->
+            <div id="accordionSKILLS" class="col">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                Langages, Frameworks, and Libraries
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSKILLS">
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Java
+                                    <ul>
+                                        <li>SpringBoot</li>
+                                        <li>SpringMVC</li>
+                                        <li>Spring JdbcTemplate</li>
+                                        <li>Thymeleaf</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">Python
+                                    <ul>
+                                        <li>Django</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">Go</li>
+                                <li class="list-group-item">JavaScirpt
+                                    <ul>
+                                        <li>jQuery</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">HTML/CSS
+                                    <ul>
+                                        <li>BootStrap</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    MySQL
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SKILLS -->
+            <!-- START OTHER SKILLS -->
+            <div id="accordionOTHER" class="col">
+                <!-- START OTHER SKILLS -->
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                Other Skills
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionOTHER">
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">JPA</li>
+                                <li class="list-group-item">JUnit</li>
+                                <li class="list-group-item">Postman</li>
+                                <li class="list-group-item">Tomcat</li>
+                                <li class="list-group-item">Version Control</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- END OTHER SKILLS -->
+            </div>
+            <!-- END OTHER SKILLS -->
+            <!--END ACCORDIONS  -->
         </div>
-        <section class="container col-sm-8 col-md-5 col-lg-3">
-            <h5 class="text-left">Education</h5>
-            <ul class="list-group">
-                <li class="list-group-item">New York University Tandon School of Engineering
-                    <ul>
-                        <li>Bachelor of Science</li>
-                        <li>Biomolecular Sciences</li>
-                        <li><a href="https://www.nyu.edu/registrar/forms-procedures/electronic-diploma-validation.html"
-                                target="_blank">See
-                                Credential</a><br />Use Credential ID 22P3-9BYS-MSNQ</li>
-                    </ul>
-                </li>
-                <li class="list-group-item">University of California, Irvine
-                    <ul>
-                        <li>Coursera Certificate</li>
-                        <li>Getting Started with Go</li>
-                        <li><a href="https://coursera.org/share/8799b285994d76499065d7c7c61ff141" target="_blank">Show
-                                Credential</a></li>
-                    </ul>
-                </li>
-                <li class="list-group-item">University of Michigan
-                    <ul>
-                        <li>Coursera Certificate</li>
-                        <li>Building Web Applications in Django</li>
-                        <li><a href="https://coursera.org/share/e6327aae486f76ab9a653a9b2e606e87" target="_blank">Show
-                                Credential</a></li>
-                    </ul>
-                </li>
-                <li class="list-group-item">University of Michigan
-                    <ul>
-                        <li>Coursera Certificate</li>
-                        <li>Web Application Technologies and Django</li>
-                        <li><a href="https://coursera.org/share/fcba8bdd1fe31704f93fa30800f1c14b" target="_blank">Show
-                                Credential</a></li>
-                    </ul>
-                </li>
-                <li class="list-group-item">LaGuardia Community College
-                    <ul>
-                        <li>Software Guild Certificate</li>
-                        <li> Web Development Bootcamp - Java</li>
-                        <li><a href="https://www.credly.com/badges/7b52281a-e064-490b-9368-cad8f7a5f608/public_url"
-                                target="_blank">Show
-                                Credential</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section class="container col-sm-8 col-md-5 col-lg-3">
-            <h5 class="text-left">Langages, Frameworks, and Libraries</h5>
-
-            <ul class="list-group">
-                <li class="list-group-item">Java
-                    <ul>
-                        <li>SpringBoot</li>
-                        <li>SpringMVC</li>
-                        <li>Spring JdbcTemplate</li>
-                        <li>Thymeleaf</li>
-                    </ul>
-                </li>
-                <li class="list-group-item">Python
-                    <ul>
-                        <li>Django</li>
-                    </ul>
-                </li>
-                <li class="list-group-item">Go</li>
-                <li class="list-group-item">JavaScirpt
-                    <ul>
-                        <li>jQuery</li>
-                    </ul>
-                </li>
-                <li class="list-group-item">HTML/CSS
-                    <ul>
-                        <li>BootStrap</li>
-                    </ul>
-                </li>
-                <li class="list-group-item">
-                    MySQL
-                </li>
-
-            </ul>
-        </section>
-
-        <section class="container col-sm-8 col-md-5 col-lg-3">
-            <h5 class="text-left">Other Skills</h5>
-            <ul class="list-group">
-                <li class="list-group-item">JPA</li>
-                <li class="list-group-item">JUnit</li>
-                <li class="list-group-item">Postman</li>
-                <li class="list-group-item">Tomcat</li>
-                <li class="list-group-item">Version Control</li>
-            </ul>
-        </section>
     </div>
     <!-- End About Me -->
 
