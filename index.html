@@ -25,64 +25,121 @@
     </style>
 </head>
 
-<body class="container d-flex">
+<body class="container">
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light m-2 col-3">
-        <div class="flex-column d-flex">
-            <a class="p-2 m-2" href="projects.html" target="_blank"><button id="button-projects"
-                    class="btn">Projects</button></a>
-            <a class="p-2 m-2" href="https://www.linkedin.com/in/margaret-donin/" target="_blank"><button
-                    id="button-LinkedIn" class="btn">LinkedIn</button></a>
-            <a class="p-2 m-2" href="https://github.com/rtdonin" target="_blank"><button id="button-github"
-                    class="btn">GitHub</button></a>
-            <a class="p-2 m-2" href="https://rtdonin.wordpress.com" target="_blank"><button id="button-wordpress"
-                    class="btn">Wordpress</button></a>
-            <a class="p-2 m-2" href="resume.html" target="_blank"><button id="button-resume" class="btn">Resume</button></a>
-            <a class="p-2 m-2" href="mailto: rtdonin@gmail.com?subject=Hello%20From%20Your%20Landing%20Page!"
-                target="_blank"><button id="button-email" class="btn">E-mail</button></a>
-        </div>
+    <nav class="navbar row">
+        <a class="p-2 m-2" href="projects.html" target="_blank"><button class="btn">Projects</button></a>
+        <a class="p-2 m-2" href="https://www.linkedin.com/in/margaret-donin/" target="_blank"><button
+                class="btn">LinkedIn</button></a>
+        <a class="p-2 m-2" href="https://github.com/rtdonin" target="_blank"><button class="btn">GitHub</button></a>
+        <a class="p-2 m-2" href="https://rtdonin.wordpress.com" target="_blank"><button
+                class="btn">Wordpress</button></a>
+        <a class="p-2 m-2" href="resume.pdf" download="DoninMargaret_resume.pdf" target="_blank"><button
+                class="btn">Resume</button></a>
+        <a class="p-2 m-2" href="mailto: rtdonin@gmail.com?subject=Hello%20From%20Your%20Landing%20Page!"
+            target="_blank"><button class="btn">E-mail</button></a>
     </nav>
     <!-- end nav bar -->
 
     <!-- About Me -->
-    <div id="about-me" class="m-2 p-3 col-lg-8 col-md-10">
-        <h1 class="text-lg-left text-md-left text-sm-center">Margaret Donin</h1>
-        <h2 class="text-lg-right text-md-right text-sm-center">Full Stack Software Developer</h2>
-        <p class="text-lg-center text-md-center text-sm-center">
-            Langages, Frameworks, and Libraries
+    <div id="about-me" class="m-2 p-2 row">
+        <div class="container m-2">
+            <h1 class="text-lg-left text-md-left text-sm-center">Margaret Donin</h1>
+            <h2 class="text-center">Full Stack Software Developer</h2>
+        </div>
+        <section class="container col-sm-8 col-md-5 col-lg-3">
+            <h5 class="text-left">Education</h5>
+            <ul class="list-group">
+                <li class="list-group-item">New York University Tandon School of Engineering
+                    <ul>
+                        <li>Bachelor of Science</li>
+                        <li>Biomolecular Sciences</li>
+                        <li><a href="https://www.nyu.edu/registrar/forms-procedures/electronic-diploma-validation.html"
+                                target="_blank">See
+                                Credential</a><br />Use Credential ID 22P3-9BYS-MSNQ</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">University of California, Irvine
+                    <ul>
+                        <li>Coursera Certificate</li>
+                        <li>Getting Started with Go</li>
+                        <li><a href="https://coursera.org/share/8799b285994d76499065d7c7c61ff141" target="_blank">Show
+                                Credential</a></li>
+                    </ul>
+                </li>
+                <li class="list-group-item">University of Michigan
+                    <ul>
+                        <li>Coursera Certificate</li>
+                        <li>Building Web Applications in Django</li>
+                        <li><a href="https://coursera.org/share/e6327aae486f76ab9a653a9b2e606e87" target="_blank">Show
+                                Credential</a></li>
+                    </ul>
+                </li>
+                <li class="list-group-item">University of Michigan
+                    <ul>
+                        <li>Coursera Certificate</li>
+                        <li>Web Application Technologies and Django</li>
+                        <li><a href="https://coursera.org/share/fcba8bdd1fe31704f93fa30800f1c14b" target="_blank">Show
+                                Credential</a></li>
+                    </ul>
+                </li>
+                <li class="list-group-item">LaGuardia Community College
+                    <ul>
+                        <li>Software Guild Certificate</li>
+                        <li> Web Development Bootcamp - Java</li>
+                        <li><a href="https://www.credly.com/badges/7b52281a-e064-490b-9368-cad8f7a5f608/public_url"
+                                target="_blank">Show
+                                Credential</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="container col-sm-8 col-md-5 col-lg-3">
+            <h5 class="text-left">Langages, Frameworks, and Libraries</h5>
 
-        <ul class="list-group d-flex flex-row flex-wrap">
-            <li class="list-group-item col-sm-8 col-md-6 col-lg-4">Java
-                <ul>
-                    <li>SpringBoot</li>
-                    <li>SpringMVC</li>
-                    <li>JDBCTemplate</li>
-                    <li>Thymeleaf</li>
-                </ul>
-            </li>
-            <li class="list-group-item col-sm-8 col-md-8 col-lg-4">Python
-                <ul>
-                    <li>Django</li>
-                </ul>
-            </li>
-            <li class="list-group-item col-sm-8 col-md-6 col-lg-4">Go</li>
-            <li class="list-group-item col-sm-8 col-md-6 col-lg-4">JavaScirpt
-                <ul>
-                    <li>jQuery</li>
-                </ul>
-            </li>
-            <li class="list-group-item col-sm-8 col-md-8 col-lg-4">HTML/CSS
-                <ul>
-                    <li>BootStrap</li>
-                </ul>
-            </li>
-            <li class="list-group-item col-sm-8 col-md-8 col-lg-4">
-                MySQL
-            </li>
+            <ul class="list-group">
+                <li class="list-group-item">Java
+                    <ul>
+                        <li>SpringBoot</li>
+                        <li>SpringMVC</li>
+                        <li>Spring JdbcTemplate</li>
+                        <li>Thymeleaf</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">Python
+                    <ul>
+                        <li>Django</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">Go</li>
+                <li class="list-group-item">JavaScirpt
+                    <ul>
+                        <li>jQuery</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">HTML/CSS
+                    <ul>
+                        <li>BootStrap</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    MySQL
+                </li>
 
-        </ul>
-        </p>
+            </ul>
+        </section>
+
+        <section class="container col-sm-8 col-md-5 col-lg-3">
+            <h5 class="text-left">Other Skills</h5>
+            <ul class="list-group">
+                <li class="list-group-item">JPA</li>
+                <li class="list-group-item">JUnit</li>
+                <li class="list-group-item">Postman</li>
+                <li class="list-group-item">Tomcat</li>
+                <li class="list-group-item">Version Control</li>
+            </ul>
+        </section>
     </div>
     <!-- End About Me -->
 
