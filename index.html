@@ -3,110 +3,88 @@
     Date Created: 3/24/20
     Most recent revision: 3/28/20
     Most recent revision: 11/15/20
-
-    F4F6F6 off white
-    BC8F8F rosybrown
-    93859B purple
-    AB445B strawberry pink
-    424F48 green
+    Most recent revision: 01/13/21
+    Most Recent revision: 05/31/2022
 -->
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-    <title>Landing Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Welcome</title>
+
     <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style>
-        body {
-            background-color: rosybrown;
-            color: #424F48;
-            padding: 5% 10% 5%;
-        }
-
-        #everything {
-            background-color: rgba(244, 246, 246, 0.63);
-            border-radius: 20px;
-            box-shadow: 1px 1px 20px 1px rgba(244, 246, 246, 0.63);
-        }
-
-        h1 {
-            font-size: 300%;
-            font-weight: 300;
-            line-height: 1.2;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 300;
-            line-height: 1;
-        }
-
-        main,
-        header,
-        footer {
-            margin: 5% 3%;
-            padding: 3%;
-        }
-
-        header>div>.btn,
-        .email {
-            color: #AB445B;
-        }
-
-        header>div>.btn:hover,
-        .email:hover {
-            color: #93859B;
-        }
-
-        .btn:hover {
-            background-color: #f8f9fa;
-        }
-
-        .btn {
-            color: #424F48;
+        .list-group-item {
+            border: none;
         }
     </style>
 </head>
 
-<body>
-    <div id="everything" class="container d-flex flex-column justify-content-center">
-        <header>
-            <h1 class="row justify-content-center text-center">Margaret Donin</h1>
+<body class="container d-flex">
 
-            <div class="row justify-content-around p-3">
-                <a class="col-lg-2 col-md-3 col-sm-5 btn btn-light m-2"
-                    href="https://rtdonin.wordpress.com">Wordpress</a>
-                <a class="col-lg-2 col-md-3 col-sm-5 btn btn-light m-2" href="https://github.com/rtdonin">GitHub</a>
-                <a class="col-lg-2 col-md-3 col-sm-5 btn btn-light m-2"
-                    href="https://www.linkedin.com/in/margaret-donin/">LinkedIn</a>
-            </div>
-        </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light m-2 col-3">
+        <div class="flex-column d-flex">
+            <a class="p-2 m-2" href="projects.html" target="_blank"><button id="button-projects"
+                    class="btn">Projects</button></a>
+            <a class="p-2 m-2" href="https://www.linkedin.com/in/margaret-donin/" target="_blank"><button
+                    id="button-LinkedIn" class="btn">LinkedIn</button></a>
+            <a class="p-2 m-2" href="https://github.com/rtdonin" target="_blank"><button id="button-github"
+                    class="btn">GitHub</button></a>
+            <a class="p-2 m-2" href="https://rtdonin.wordpress.com" target="_blank"><button id="button-wordpress"
+                    class="btn">Wordpress</button></a>
+            <a class="p-2 m-2" href="resume.html" target="_blank"><button id="button-resume" class="btn">Resume</button></a>
+            <a class="p-2 m-2" href="mailto: rtdonin@gmail.com?subject=Hello%20From%20Your%20Landing%20Page!"
+                target="_blank"><button id="button-email" class="btn">E-mail</button></a>
+        </div>
+    </nav>
+    <!-- end nav bar -->
 
-        <main class="row container flex-column">
-            <article class="row d-flex justify-content-around">
-                <h2 class="col-4 align-self-top text-right">JavaScript Project</h2>
-                <div class="col-4">
-                    <a class="btn btn-light m-2" href="js/restaurant/index.html">Restaurant</a>
-                </div>
-            </article>
+    <!-- About Me -->
+    <div id="about-me" class="m-2 p-3 col-lg-8 col-md-10">
+        <h1 class="text-lg-left text-md-left text-sm-center">Margaret Donin</h1>
+        <h2 class="text-lg-right text-md-right text-sm-center">Full Stack Software Developer</h2>
+        <p class="text-lg-center text-md-center text-sm-center">
+            Langages, Frameworks, and Libraries
 
-            <article class="row d-flex justify-content-around">
-                <h2 class="col-4 align-self-top text-right">Java Projects</h2>
-                <div class="col-4">
-                    <a class="btn btn-light m-2" href="">To be linked</a>
-                </div>
-            </article>
-        </main>
+        <ul class="list-group d-flex flex-row flex-wrap">
+            <li class="list-group-item col-sm-8 col-md-6 col-lg-4">Java
+                <ul>
+                    <li>SpringBoot</li>
+                    <li>SpringMVC</li>
+                    <li>JDBCTemplate</li>
+                    <li>Thymeleaf</li>
+                </ul>
+            </li>
+            <li class="list-group-item col-sm-8 col-md-8 col-lg-4">Python
+                <ul>
+                    <li>Django</li>
+                </ul>
+            </li>
+            <li class="list-group-item col-sm-8 col-md-6 col-lg-4">Go</li>
+            <li class="list-group-item col-sm-8 col-md-6 col-lg-4">JavaScirpt
+                <ul>
+                    <li>jQuery</li>
+                </ul>
+            </li>
+            <li class="list-group-item col-sm-8 col-md-8 col-lg-4">HTML/CSS
+                <ul>
+                    <li>BootStrap</li>
+                </ul>
+            </li>
+            <li class="list-group-item col-sm-8 col-md-8 col-lg-4">
+                MySQL
+            </li>
 
-        <footer>
-            <div class="text-center">
-                <a class="email" href="mailto: rtdonin@gmail.com?subject=From%20Your%20Landing%20Page">Contact me</a>
-            </div>
-        </footer>
+        </ul>
+        </p>
     </div>
+    <!-- End About Me -->
 
     <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
