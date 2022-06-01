@@ -12,102 +12,134 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset = "utf-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <link rel = "stylesheet" href = "styles/restaurantStyles.css" type = "text/css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <style>
-            .jumbotron{
-                background-color: rgba(22, 105, 117, 0.253);
-                border: #166975 dashed thin;
-                padding: 5% 10%;
-                color: #08182C;
-                margin: 2%;
-            }
-            .jumbotron h2 {
-                background-color: #08182C;
-                color: #EDF6ED;
-                border: #166975 thick solid;
-            }
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="styles/restaurantStyles.css" type="text/css">
 
-            /*editing the reviews*/
-            .revLink {
-                color: #166975;
-                text-decoration-line: underline; 
-            }
-            .revLink:visited {
-                color: #659C62;
-            }
-            .revLink:hover {
-                font-weight: bold;
-            }
-            .revLink:active {
-                text-decoration-line: none;
-            }
+    <style>
+        .jumbotron {
+            background-color: rgba(22, 105, 117, 0.253);
+            border: #166975 dashed thin;
+            padding: 5% 10%;
+            color: #08182C;
+            margin: 2%;
+        }
 
-        </style>
-        <title>Welcome!</title>
-    </head>
-    <body>
-        <div class = "container">
-            <noscript><img class = "missingJS" src = "images/stop-sign.png" />This page is best viewed with JavaScript enabled.</noscript>
-            <!--title-->
-            <header>
-                <h1 class = "display-1">Introverts Bar</h1>
-            </header>
+        .jumbotron h2 {
+            background-color: #08182C;
+            color: #EDF6ED;
+            border: #166975 thick solid;
+        }
 
-            <!--nav bar, current page is different-->
-            <nav class = "row justify-content-start">
-                <p class = "col-2 btn current-page"><a href = ""><i class='fas fa-home' style = "color: #08182C;"></i></a></p>
-                <p class = "col-2 btn"><a href = "menu.html">Menu</a></p>
-                <p class = "col-2 btn"><a href = "contact.html">Contact Us</a></p>
-            </nav>
+        /*editing the reviews*/
+        .revLink {
+            color: #166975;
+            text-decoration-line: underline;
+        }
 
-            <!--required jumbotron-->
-            <div class="jumbotron jumbotron-fluid">
-                <h2 class="display-4">Opening a New Location</h2>
-                <p class = "lead">We are pleased to announce our sister bar, Foo Bar.</p>
-                <p> Suspendisse felis felis, tincidunt eu lobortis ac, porttitor vel elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eleifend finibus felis, quis eleifend tellus posuere eget. Sed erat ex, malesuada sed libero quis, consequat tempus neque. Duis at nibh est. </p>
-            </div>
+        .revLink:visited {
+            color: #659C62;
+        }
 
-            <!--This section had three parts: image, description, reiews-->
-            <section>
-                <!--the imgage-->
-                <img src = "images/bar.jpg"
-                    alt = "the bar"
-                    class = "img-fluid mx-auto d-block"
-                    style = "border: #6ba693 dashed thin;
+        .revLink:hover {
+            font-weight: bold;
+        }
+
+        .revLink:active {
+            text-decoration-line: none;
+        }
+    </style>
+    <title>Welcome!</title>
+</head>
+
+<body>
+    <div class="container">
+        <noscript><img class="missingJS" src="images/stop-sign.png" />This page is best viewed with JavaScript
+            enabled.</noscript>
+        <!--title-->
+        <header>
+            <h1 class="display-1">Introverts Bar</h1>
+        </header>
+
+        <!--nav bar, current page is different-->
+        <nav class="row justify-content-start">
+            <p class="col-2 btn current-page"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                        <path fill-rule="evenodd"
+                            d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                    </svg></i></a></p>
+            <p class="col-2 btn"><a href="menu.html">Menu</a></p>
+            <p class="col-2 btn"><a href="contact.html">Contact Us</a></p>
+        </nav>
+
+
+
+        <!--required jumbotron-->
+        <div class="jumbotron jumbotron-fluid">
+            <h2 class="display-4">Opening a New Location</h2>
+            <p class="lead">We are pleased to announce our sister bar, Foo Bar.</p>
+            <p> Suspendisse felis felis, tincidunt eu lobortis ac, porttitor vel elit. Pellentesque habitant morbi
+                tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eleifend finibus felis, quis
+                eleifend tellus posuere eget. Sed erat ex, malesuada sed libero quis, consequat tempus neque. Duis at
+                nibh est. </p>
+        </div>
+
+        <!--This section had three parts: image, description, reiews-->
+        <section>
+            <!--the imgage-->
+            <img src="images/bar.jpg" alt="the bar" class="img-fluid mx-auto d-block" style="border: #6ba693 dashed thin;
                         border-radius: 5%;
                         max-height: 400px;" />
 
-                <!--the description-->
-                <article class = "row justify-content-center">
-                    <h2 class = "col-4">Bar Description</h2>
-                    <p class = "col-8 text-justify">Morbi pulvinar erat eu velit feugiat, ac luctus diam blandit. Integer nunc ligula, elementum eu quam et, facilisis interdum leo. Proin posuere et tellus vel sodales. Curabitur malesuada, odio ut condimentum tempus, odio tortor vulputate metus, nec dictum magna mi et ipsum. Vivamus feugiat sagittis est quis convallis. Sed id viverra eros, quis iaculis massa. Donec nec odio vulputate, euismod orci ac, elementum tortor. Maecenas condimentum elit volutpat urna ultricies pellentesque. Suspendisse tempus convallis imperdiet. Aliquam erat volutpat. Nulla fringilla scelerisque condimentum. Donec ac gravida est. Cras tempus nibh id malesuada finibus. Sed dolor dui, commodo quis condimentum in, scelerisque non lectus. In a nisi a nulla viverra consectetur.</p>
-                </article>
+            <!--the description-->
+            <article class="row justify-content-center">
+                <h2 class="col-4">Bar Description</h2>
+                <p class="col-8 text-justify">Morbi pulvinar erat eu velit feugiat, ac luctus diam blandit. Integer nunc
+                    ligula, elementum eu quam et, facilisis interdum leo. Proin posuere et tellus vel sodales. Curabitur
+                    malesuada, odio ut condimentum tempus, odio tortor vulputate metus, nec dictum magna mi et ipsum.
+                    Vivamus feugiat sagittis est quis convallis. Sed id viverra eros, quis iaculis massa. Donec nec odio
+                    vulputate, euismod orci ac, elementum tortor. Maecenas condimentum elit volutpat urna ultricies
+                    pellentesque. Suspendisse tempus convallis imperdiet. Aliquam erat volutpat. Nulla fringilla
+                    scelerisque condimentum. Donec ac gravida est. Cras tempus nibh id malesuada finibus. Sed dolor dui,
+                    commodo quis condimentum in, scelerisque non lectus. In a nisi a nulla viverra consectetur.</p>
+            </article>
 
-                <!--the reviews-->
-                <article class = "row reviews justify-content-center">
-                    <h3 class = "col-4">Read a recent review!</h3>
-                    <p class = "col-8">
-                        <a class = "revLink" href = "https://www.nytimes.com/2015/03/18/dining/restaurant-review-eleven-madison-park-in-midtown-south.html" target = "_blank">4 Star Review,</a>
-                        <a class = "revLink" href = "https://www.nytimes.com/2019/10/08/dining/bread-and-salt-review-pizza.html" target = "_blank">1 Star Price</a>
-                    </p>
-                </article>
-            </section>
-            
-            <footer class = "display-5">
-                <h4>6 Summerhouse Street, Freeport, NY 11520</h4>
-                <h4>562-296-6837</h4>
-            </footer>
+            <!--the reviews-->
+            <article class="row reviews justify-content-center">
+                <h3 class="col-4">Read a recent review!</h3>
+                <p class="col-8">
+                    <a class="revLink"
+                        href="https://www.nytimes.com/2015/03/18/dining/restaurant-review-eleven-madison-park-in-midtown-south.html"
+                        target="_blank">4 Star Review,</a>
+                    <a class="revLink" href="https://www.nytimes.com/2019/10/08/dining/bread-and-salt-review-pizza.html"
+                        target="_blank">1 Star Price</a>
+                </p>
+            </article>
+        </section>
 
-            <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
-            <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
-            <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
-            <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin = "anonymous"></script>
-        </div> <!--end of .container-->
-    </body>
+        <footer class="display-5">
+            <h4>6 Summerhouse Street, Freeport, NY 11520</h4>
+            <h4>562-296-6837</h4>
+        </footer>
+
+        <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    </div>
+    <!--end of .container-->
+</body>
+
 </html>
