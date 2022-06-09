@@ -70,21 +70,25 @@
     <div class="m-2 p-2 container">
         <h6 class="row justify-content-right m-2 p-2">Full Stack Software Developer</h6>
 
+        <div class="row">
+            <div class="col-3">
+                <div class="col-3">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">Education</button>
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        Languages, Frameworks, and Libraries</button>
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree">Other Skills</button>
+                </div>
+            </div>
+        </div>
+
         <div class="row justify-content-between d-flex">
             <!--START ACCORDIONS  -->
             <div id="accordionEDU" class="col ">
                 <!-- START EDUCATION -->
                 <div class="card">
-
-                    <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                Education
-                            </button>
-                        </h5>
-                    </div>
-
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionEDU">
                         <div class="card-body">
                             <ul class="list-group">
@@ -136,21 +140,12 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
             <!-- END EDUCATION -->
             <!-- START SKILLS -->
             <div id="accordionSKILLS" class="col">
                 <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                aria-expanded="false" aria-controls="collapseTwo">
-                                Languages, Frameworks, and Libraries
-                            </button>
-                        </h5>
-                    </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSKILLS">
                         <div class="card-body">
                             <ul class="list-group">
@@ -192,14 +187,6 @@
             <div id="accordionOTHER" class="col">
                 <!-- START OTHER SKILLS -->
                 <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                aria-expanded="false" aria-controls="collapseThree">
-                                Other Skills
-                            </button>
-                        </h5>
-                    </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                         data-parent="#accordionOTHER">
                         <div class="card-body">
