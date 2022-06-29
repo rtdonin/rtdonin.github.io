@@ -1,4 +1,4 @@
-header {
+header, #navbarName {
     color: #1B2117;
 }
 
@@ -6,5 +6,5 @@ nav {
     margin: none;
     background-color: #449DD1;
     color:linen;
+    width: max-content;
 }
-
