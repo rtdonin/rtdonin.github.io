@@ -67,20 +67,6 @@
             margin: 1rem 0 1rem;
         }
 
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1;
-        }
-
-        .hide {
-            visibility: hidden;
-        }
-
-        .display {
-            visibility: visible;
-        }
     </style>
 </head>
 
@@ -91,26 +77,19 @@
         <p class="display-4 align-self-end w-auto">Full Stack Developer</p>
     </header>
 
-    <nav class="navbar navbar-expand-lg bg-light" style="width: 100%;">
+    <nav class="navbar navbar-expand-lg bg-light sticky-md-top sticky-sm-top" style="width: 100%;">
         <div class="container-fluid">
-            <a class="navbar-brand hide" id="navbarName" href="#">Margaret Donin</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse collapse show" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            About Me<span class="visually-hidden">(current)</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item" href="#education">Education</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#skills">Skills</a></li>
-                        </ul>
+            <div class="navbar-collapse collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav d-flex flex-lg-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="projects.html">Projects</a>
@@ -223,7 +202,7 @@
         </div>
     </article>
 
-    <article class=" justify-content-between flex-row  w-auto" id="skills">
+    <article class=" justify-content-between flex-row w-auto" id="skills">
         <div class="display-4 row title w-auto">Skills</div>
         <div class="flex-column">
             <section class="card p-2">
