@@ -1,10 +1,8 @@
-header, #navbarName {
+header {
     color: #1B2117;
 }
 
 nav {
-    margin: none;
-    background-color: #449DD1;
-    color:linen;
-    width: max-content;
+    background-color: linen;
+    color: #5982BC;
 }

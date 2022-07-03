@@ -63,28 +63,29 @@
             align-self: center;
         }
 
-        #skills>div>.card {
+        #projects>.v-stack, #skills>div>.card {
             margin: 1rem 0 1rem;
         }
-
     </style>
 </head>
 
-<body class="container-fluid">
-
-    <header class="p-3 d-flex flex-column">
-        <p class="display-1 align-self-lg-center align-self-md-start w-auto">Margaret Donin</p>
-        <p class="display-4 align-self-end w-auto">Full Stack Developer</p>
+<body class="">
+    <header class="container-fluid d-flex row flex-column p-3">
+        <p class="display-1 align-self-lg-center align-self-md-start w-auto row">Margaret Donin</p>
+        <p class="display-4 align-self-end w-auto row">Full Stack Developer</p>
     </header>
 
-    <nav class="navbar navbar-expand-lg bg-light sticky-md-top sticky-sm-top" style="width: 100%;">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav d-flex flex-lg-column">
+                <ul class="navbar-nav d-flex flex-column-sm flex-column-md flex-row-lg">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutMe">About Me</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#education">Education</a>
                     </li>
@@ -95,16 +96,16 @@
                         <a class="nav-link" href="projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/margaret-donin/"
-                            target="_blank">LinkedIn</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="https://github.com/rtdonin" target="_blank">Github</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
                             href="https://drive.google.com/file/d/1jDibHmCW3vrUmy_jqRrbBnh1gjaER9nT/view?usp=sharing"
                             target="_blank">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/margaret-donin/"
+                            target="_blank">LinkedIn</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
@@ -116,149 +117,164 @@
         </div>
     </nav>
 
+    <div class="container-fluid">
+        <article id="aboutMe">
+            <div class="display-4 row title w-auto">About Me</div>
+            <div class="">
+                I'm a recent university graduate with experience analyzing data and developing full stack database
+                driven RESTful web applications. Check out my latest projects on my Github.
+            </div>
+        </article>
+        <article id="education">
+            <div class="display-4 row title w-auto">Education</div>
+            <div class=" d-flex card-group row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 gx-4">
+                <div class="col">
+                    <section class="card">
+                        <img class="card-img-top" src="icon/NYU_Stacked_CMYK_Color.jpg" alt="NYU Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">New York University</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Tandon School of Engineering<br />
+                                Bachelor of Science<br />
+                                Biomolecular Sciences</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://www.nyu.edu/registrar/forms-procedures/electronic-diploma-validation.html"
+                                target="_blank" class="card-link">Show Credential</a>
+                            <h6 class="card-subtitle mx-auto">Use Credential ID 22P3-9BYS-MSNQ</h6>
+                        </div>
+                    </section>
+                </div>
+                <div class="col">
+                    <section class="card">
+                        <img class="card-img-top" src="icon/software-guild.png" alt="Software Guild Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">LaGuardia Community College</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Software Guild Certificate<br />
+                                Web Development Bootcamp - Java</h6>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://www.credly.com/badges/7b52281a-e064-490b-9368-cad8f7a5f608/public_url"
+                                target="_blank" class="card-link">Show Credential</a>
+                        </div>
+                    </section>
+                </div>
+                <div class="col">
+                    <section class="card">
+                        <img class="card-img-top" src="icon/UCI_MB_PI_WM_300x300_YellowonBlue.png" alt="UCI Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">University of California, Irvine</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Coursera Certificate<br />
+                                Getting Started with Go</h6>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://coursera.org/share/8799b285994d76499065d7c7c61ff141" target="_blank"
+                                class="card-link">Show Credential</a>
+                        </div>
+                    </section>
+                </div>
+                <div class="col">
+                    <section class="card">
+                        <img class="card-img-top" src="icon/UM.jpg" alt="Universtiy of Michigan Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">University of Michigan</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Coursera Certificate<br />
+                                Building Web Applications in Django</h6>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://coursera.org/share/e6327aae486f76ab9a653a9b2e606e87" target="_blank"
+                                class="card-link">Show Credential</a>
+                        </div>
+                    </section>
+                </div>
+                <div class="col">
+                    <section class="card">
+                        <img class="card-img-top" src="icon/UM.jpg" alt="Universtiy of Michigan Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">University of Michigan</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Coursera Certificate<br />
+                                Web Application Technologies and Django</h6>
 
-    <article class="w-auto" id="education">
-        <div class="display-4 row title w-auto">Education</div>
-        <div class=" d-flex card-group row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-3 gx-4">
-            <div class="col">
-                <section class="card">
-                    <img class="card-img-top" src="icon/NYU_Stacked_CMYK_Color.jpg" alt="NYU Logo">
-                    <div class="card-body">
-                        <h5 class="card-title">New York University</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">
-                            Tandon School of Engineering<br />
-                            Bachelor of Science<br />
-                            Biomolecular Sciences</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.nyu.edu/registrar/forms-procedures/electronic-diploma-validation.html"
-                            target="_blank" class="card-link">Show Credential</a>
-                        <h6 class="card-subtitle mx-auto">Use Credential ID 22P3-9BYS-MSNQ</h6>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://coursera.org/share/fcba8bdd1fe31704f93fa30800f1c14b" target="_blank"
+                                class="card-link">Show Credential</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </article>
+
+        <article id="skills">
+            <div class="display-4 row title w-auto">Skills</div>
+            <div class="v-stack">
+                <section class="card p-2">
+                    <h5 class="card-title display-4">Java</h5>
+                    <div class="flex-row row justify-content-evenly">
+                        <img class="col" src="icon/java.png" alt="Java Logo">
+                        <img class="col" src="icon/jpa.jpg" alt="JPA Logo">
+                        <img class="col" src="icon/junit.png" alt="jUnit Logo">
+                        <img class="col" src="icon/tomcat.png" alt="Tomcat Logo">
                     </div>
                 </section>
-            </div>
 
-            <div class="col">
-                <section class="card">
-                    <img class="card-img-top" src="icon/UCI_MB_PI_WM_300x300_YellowonBlue.png" alt="UCI Logo">
-                    <div class="card-body">
-                        <h5 class="card-title">University of California, Irvine</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">
-                            Coursera Certificate<br />
-                            Getting Started with Go</h6>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://coursera.org/share/8799b285994d76499065d7c7c61ff141" target="_blank"
-                            class="card-link">Show Credential</a>
+                <section class="card p-2">
+                    <h5 class="card-title display-4">Languages</h5>
+                    <div class="flex-row row justify-content-evenly">
+                        <img class="col" src="icon/go.png" alt="Go logo">
+                        <img class="col" src="icon/python.png" alt="Python Logo">
+                        <img class="col" src="icon/mysql.png" alt="MySQL Logo">
                     </div>
                 </section>
-            </div>
-            <div class="col">
-                <section class="card">
-                    <img class="card-img-top" src="icon/UM.jpg" alt="Universtiy of Michigan Logo">
-                    <div class="card-body">
-                        <h5 class="card-title">University of Michigan</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">
-                            Coursera Certificate<br />
-                            Building Web Applications in Django</h6>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://coursera.org/share/e6327aae486f76ab9a653a9b2e606e87" target="_blank"
-                            class="card-link">Show Credential</a>
+
+                <section class="card p-2">
+                    <h5 class="card-title display-4">Frameworks</h5>
+                    <div class="flex-row row justify-content-evenly">
+                        <img class="col" src="icon/spring.svg" alt="Spring Logo">
+                        <img class="col" src="icon/django-logo-negative.png" alt="Django Logo">
                     </div>
                 </section>
-            </div>
-            <div class="col">
-                <section class="card">
-                    <img class="card-img-top" src="icon/UM.jpg" alt="Universtiy of Michigan Logo">
-                    <div class="card-body">
-                        <h5 class="card-title">University of Michigan</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">
-                            Coursera Certificate<br />
-                            Web Application Technologies and Django</h6>
 
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://coursera.org/share/fcba8bdd1fe31704f93fa30800f1c14b" target="_blank"
-                            class="card-link">Show Credential</a>
+                <section class="card p-2">
+                    <h5 class="card-title display-4">Front End</h5>
+                    <div class="flex-row row justify-content-evenly">
+                        <img class="col" src="icon/html&css.png" alt="CSS and HTML Logo">
+                        <img class="col" src="icon/bootstrap.svg" alt="Bootstrap Logo">
+                        <img class="col" src="icon/thymleaf.png" alt="Thymeleaf Logo">
                     </div>
                 </section>
-            </div>
-            <div class="col">
-                <section class="card">
-                    <img class="card-img-top" src="icon/software-guild.png" alt="Software Guild Logo">
-                    <div class="card-body">
-                        <h5 class="card-title">LaGuardia Community College</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">
-                            Software Guild Certificate<br />
-                            Web Development Bootcamp - Java</h6>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.credly.com/badges/7b52281a-e064-490b-9368-cad8f7a5f608/public_url"
-                            target="_blank" class="card-link">Show Credential</a>
+
+                <section class="card p-2">
+                    <h5 class="card-title display-4">JavaScript</h5>
+                    <div class="flex-row row justify-content-evenly">
+                        <img class="col" src="icon/JavaScript.svg" alt="JavaScript Logo">
+                        <img class="col" src="icon/jquery-logo-vertical_large_square.png" alt="jQuery Logo">
+                        <img class="col" src="icon/AJAX.png" alt="AJAX Logo">
                     </div>
                 </section>
-            </div>
-        </div>
-    </article>
 
-    <article class=" justify-content-between flex-row w-auto" id="skills">
-        <div class="display-4 row title w-auto">Skills</div>
-        <div class="flex-column">
-            <section class="card p-2">
-                <h5 class="card-title display-4">Java</h5>
-                <div class="flex-row row justify-content-evenly">
-                    <img class="col" src="icon/java.png" alt="Java Logo">
-                    <img class="col" src="icon/jpa.jpg" alt="JPA Logo">
-                    <img class="col" src="icon/junit.png" alt="jUnit Logo">
-                    <img class="col" src="icon/tomcat.png" alt="Tomcat Logo">
-                </div>
-            </section>
+                <section class="card p-2">
+                    <h5 class="card-title display-4">Misc.</h5>
+                    <div class="flex-row row justify-content-evenly">
+                        <img class="col" src="icon/postman.png" alt="Postman Logo">
+                        <img class="col" src="icon/git.png" alt="Git Logo">
+                    </div>
+                </section>
+        </article>
 
-            <section class="card p-2">
-                <h5 class="card-title display-4">Languages</h5>
-                <div class="flex-row row justify-content-evenly">
-                    <img class="col" src="icon/go.png" alt="Go logo">
-                    <img class="col" src="icon/python.png" alt="Python Logo">
-                    <img class="col" src="icon/mysql.png" alt="MySQL Logo">
-                </div>
-            </section>
-
-            <section class="card p-2">
-                <h5 class="card-title display-4">Frameworks</h5>
-                <div class="flex-row row justify-content-evenly">
-                    <img class="col" src="icon/spring.svg" alt="Spring Logo">
-                    <img class="col" src="icon/django-logo-negative.png" alt="Django Logo">
-                </div>
-            </section>
-
-            <section class="card p-2">
-                <h5 class="card-title display-4">Front End</h5>
-                <div class="flex-row row justify-content-evenly">
-                    <img class="col" src="icon/html&css.png" alt="CSS and HTML Logo">
-                    <img class="col" src="icon/bootstrap.svg" alt="Bootstrap Logo">
-                    <img class="col" src="icon/thymleaf.png" alt="Thymeleaf Logo">
-                </div>
-            </section>
-
-            <section class="card p-2">
-                <h5 class="card-title display-4">JavaScript</h5>
-                <div class="flex-row row justify-content-evenly">
-                    <img class="col" src="icon/JavaScript.svg" alt="JavaScript Logo">
-                    <img class="col" src="icon/jquery-logo-vertical_large_square.png" alt="jQuery Logo">
-                    <img class="col" src="icon/AJAX.png" alt="AJAX Logo">
-                </div>
-            </section>
-
-            <section class="card p-2">
-                <h5 class="card-title display-4">Misc.</h5>
-                <div class="flex-row row justify-content-evenly">
-                    <img class="col" src="icon/postman.png" alt="Postman Logo">
-                    <img class="col" src="icon/git.png" alt="Git Logo">
-                </div>
-            </section>
-    </article>
-    <script src="js/navBar.js"></script>
+        <article id="projects">
+            <div class="display-4 row title w-auto">Projects</div>
+            <div class="v-stack">
+                <section class="card p-2">
+                    <h5 class="card-title display-4">Not yet ready.</h5>
+                </section>
+        </article>
+    </div>
+    <!-- <script src="js/navBar.js"></script> -->
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
