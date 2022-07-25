@@ -35,7 +35,7 @@
             background-color: linen;
         }
 
-        .nav-item>a>span{
+        .nav-item>a>span {
             color: #1B2117;
         }
 
@@ -55,17 +55,16 @@
             align-self: center;
         }
 
-        #education>div>div>section>img {
+        /* IMAGES IN EDUCATION AND PROJECTS */
+        #education>div>div>section>img,
+        #projects>div>div>section>img {
             padding: 1rem;
             width: 60%;
             align-self: center;
         }
 
-        #education>div>div>section {
-            height: 100%;
-        }
-
-        #skills>div>section>div>img {
+        /* IMAGES IN SKILLS ONLY */
+        #skills>div>div>section>div>img {
             padding: 1rem;
             width: auto;
             height: 100%;
@@ -73,9 +72,26 @@
             align-self: center;
         }
 
-        #projects>.v-stack,
-        #skills>div>.card {
-            margin: 1rem 0 1rem;
+        /* CREATING IDENTICAL HEIGHT IN ALL IN EACH SECTION'S CARDS*/
+        #education>div>div>section{
+            height: 100%;
+        }
+        #skills>div>div>section{
+            height: 100%;
+        }
+        #projects>div>div>section {
+            height: 100%;
+        }
+
+        /* WHITE SPACE MANAGEMENT */
+        #skills>div>div>.card {
+            margin: 1rem;
+        }
+        #projects>div>div>.card {
+            margin: 1rem;
+        }
+        #projects {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -83,7 +99,6 @@
 <body class="">
     <header class="container-fluid d-flex row flex-column p-3">
         <p class="display-1 align-self-center w-auto row">Margaret Donin</p>
-        <!-- <p class="display-4 align-self-end w-auto row">Full Stack Developer</p> -->
     </header>
 
     <nav class="navbar navbar-expand-lg sticky-top">
@@ -134,7 +149,7 @@
             </div>
             <div class="align-self-center fs-3">Full Stack Developer</div>
         </div>
-        
+
     </nav>
 
     <div class="container-fluid">
@@ -142,14 +157,19 @@
             <div class="display-4 row title w-auto">About Me</div>
             <div class="">
                 I'm a recent university graduate with experience analyzing data and developing full stack database
-                driven RESTful web applications. Check out my latest projects on my Github.
+                driven RESTful web applications. 
+                
+                <br />
+                Check out my latest projects on my <a class="nav-link"
+                    href="https://github.com/rtdonin" target="_blank"><span data-bs-target="#navbarNavDropdown"
+                        data-bs-toggle="collapse">Github</span></a> or my complete projects below.
             </div>
         </article>
         <article id="education">
             <div class="display-4 row title w-auto">Education</div>
-            <div class=" d-flex card-group row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 gx-4">
+            <div class="d-flex card-group row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 gx-4">
                 <div class="col">
-                    <section class="card">
+                    <section class="card shadow">
                         <img class="card-img-top" src="icon/NYU_Stacked_CMYK_Color.jpg" alt="NYU Logo">
                         <div class="card-body">
                             <h5 class="card-title">New York University</h5>
@@ -166,7 +186,7 @@
                     </section>
                 </div>
                 <div class="col">
-                    <section class="card">
+                    <section class="card shadow">
                         <img class="card-img-top" src="icon/software-guild.png" alt="Software Guild Logo">
                         <div class="card-body">
                             <h5 class="card-title">LaGuardia Community College</h5>
@@ -181,7 +201,7 @@
                     </section>
                 </div>
                 <div class="col">
-                    <section class="card">
+                    <section class="card shadow">
                         <img class="card-img-top" src="icon/UCI_MB_PI_WM_300x300_YellowonBlue.png" alt="UCI Logo">
                         <div class="card-body">
                             <h5 class="card-title">University of California, Irvine</h5>
@@ -196,7 +216,7 @@
                     </section>
                 </div>
                 <div class="col">
-                    <section class="card">
+                    <section class="card shadow">
                         <img class="card-img-top" src="icon/UM.jpg" alt="Universtiy of Michigan Logo">
                         <div class="card-body">
                             <h5 class="card-title">University of Michigan</h5>
@@ -211,7 +231,7 @@
                     </section>
                 </div>
                 <div class="col">
-                    <section class="card">
+                    <section class="card shadow">
                         <img class="card-img-top" src="icon/UM.jpg" alt="Universtiy of Michigan Logo">
                         <div class="card-body">
                             <h5 class="card-title">University of Michigan</h5>
@@ -231,67 +251,105 @@
 
         <article id="skills">
             <div class="display-4 row title w-auto">Skills</div>
-            <div class="v-stack">
-                <section class="card p-2">
-                    <h5 class="card-title display-4">Java</h5>
-                    <div class="flex-row row justify-content-evenly">
-                        <img class="col" src="icon/java.png" alt="Java Logo">
-                        <img class="col" src="icon/jpa.jpg" alt="JPA Logo">
-                        <img class="col" src="icon/junit.png" alt="jUnit Logo">
-                        <img class="col" src="icon/tomcat.png" alt="Tomcat Logo">
-                    </div>
-                </section>
-
-                <section class="card p-2">
-                    <h5 class="card-title display-4">Languages</h5>
-                    <div class="flex-row row justify-content-evenly">
-                        <img class="col" src="icon/go.png" alt="Go logo">
-                        <img class="col" src="icon/python.png" alt="Python Logo">
-                        <img class="col" src="icon/mysql.png" alt="MySQL Logo">
-                    </div>
-                </section>
-
-                <section class="card p-2">
-                    <h5 class="card-title display-4">Frameworks</h5>
-                    <div class="flex-row row justify-content-evenly">
-                        <img class="col" src="icon/spring.svg" alt="Spring Logo">
-                        <img class="col" src="icon/django-logo-negative.png" alt="Django Logo">
-                    </div>
-                </section>
-
-                <section class="card p-2">
-                    <h5 class="card-title display-4">Front End</h5>
-                    <div class="flex-row row justify-content-evenly">
-                        <img class="col" src="icon/html&css.png" alt="CSS and HTML Logo">
-                        <img class="col" src="icon/bootstrap.svg" alt="Bootstrap Logo">
-                        <img class="col" src="icon/thymleaf.png" alt="Thymeleaf Logo">
-                    </div>
-                </section>
-
-                <section class="card p-2">
-                    <h5 class="card-title display-4">JavaScript</h5>
-                    <div class="flex-row row justify-content-evenly">
-                        <img class="col" src="icon/JavaScript.svg" alt="JavaScript Logo">
-                        <img class="col" src="icon/jquery-logo-vertical_large_square.png" alt="jQuery Logo">
-                        <img class="col" src="icon/AJAX.png" alt="AJAX Logo">
-                    </div>
-                </section>
-
-                <section class="card p-2">
-                    <h5 class="card-title display-4">Misc.</h5>
-                    <div class="flex-row row justify-content-evenly">
-                        <img class="col" src="icon/postman.png" alt="Postman Logo">
-                        <img class="col" src="icon/git.png" alt="Git Logo">
-                    </div>
-                </section>
+            <div class="d-flex card-group row row-cols-md-2 row-cols-sm-1 g-4">
+                <div class="col">
+                    <section class="card shadow p-2">
+                        <h5 class="card-title display-4">Java</h5>
+                        <div class="flex-row row justify-content-evenly">
+                            <img class="col" src="icon/java.png" alt="Java Logo">
+                            <img class="col" src="icon/jpa.jpg" alt="JPA Logo">
+                            <img class="col" src="icon/junit.png" alt="jUnit Logo">
+                            <img class="col" src="icon/tomcat.png" alt="Tomcat Logo">
+                        </div>
+                    </section>
+                </div>
+                <div class="col">
+                    <section class="card shadow p-2">
+                        <h5 class="card-title display-4">Languages</h5>
+                        <div class="flex-row row justify-content-evenly">
+                            <img class="col" src="icon/go.png" alt="Go logo">
+                            <img class="col" src="icon/python.png" alt="Python Logo">
+                            <img class="col" src="icon/mysql.png" alt="MySQL Logo">
+                        </div>
+                    </section>
+                </div>
+                <div class="col">
+                    <section class="card shadow">
+                        <h5 class="card-title display-4">Frameworks</h5>
+                        <div class="flex-row row justify-content-evenly">
+                            <img class="col" src="icon/spring.svg" alt="Spring Logo">
+                            <img class="col" src="icon/django-logo-negative.png" alt="Django Logo">
+                        </div>
+                    </section>
+                </div>
+                <div class="col">
+                    <section class="card shadow">
+                        <h5 class="card-title display-4">Front End</h5>
+                        <div class="flex-row row justify-content-evenly">
+                            <img class="col" src="icon/html&css.png" alt="CSS and HTML Logo">
+                            <img class="col" src="icon/bootstrap.svg" alt="Bootstrap Logo">
+                            <img class="col" src="icon/thymleaf.png" alt="Thymeleaf Logo">
+                        </div>
+                    </section>
+                </div>
+                <div class="col">
+                    <section class="card shadow">
+                        <h5 class="card-title display-4">JavaScript</h5>
+                        <div class="flex-row row justify-content-evenly">
+                            <img class="col" src="icon/JavaScript.svg" alt="JavaScript Logo">
+                            <img class="col" src="icon/jquery-logo-vertical_large_square.png" alt="jQuery Logo">
+                            <img class="col" src="icon/AJAX.png" alt="AJAX Logo">
+                        </div>
+                    </section>
+                </div>
+                <div class="col">
+                    <section class="card shadow">
+                        <h5 class="card-title display-4">Misc.</h5>
+                        <div class="flex-row row justify-content-evenly">
+                            <img class="col" src="icon/postman.png" alt="Postman Logo">
+                            <img class="col" src="icon/git.png" alt="Git Logo">
+                        </div>
+                    </section>
+                </div>
+            </div>
         </article>
 
         <article id="projects">
             <div class="display-4 row title w-auto">Projects</div>
-            <div class="v-stack">
-                <section class="card p-2">
-                    <h5 class="card-title display-4">Coming soon!</h5>
-                </section>
+            <div class="d-flex card-group row row-cols-md-2 row-cols-sm-1 g-4">
+                <div class="col">
+                    <section class="card shadow">
+                        <a href="https://blogging-project.herokuapp.com/" target="_blank" class="card-link"><img
+                                class="card-img-top" src="Project_Images/MyBlog.png"
+                                alt="Image of &quot;My Very Awesome Blog&quot; project"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">My Very Awesome Blog</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                A blog with different levels of authentication available for various users to comment
+                                and post. Built in Java, MySQL, SpringBoot, Thymelead, and Bootstrap.
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://blogging-project.herokuapp.com/" target="_blank" class="card-link">View
+                                Project</a>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- FOR MY NEXT PROJECT -->
+                <!-- <div class="col">
+                    <section class="card shadow">
+                        <a href="LINK" target="_blank" class="card-link"><img class="card-img-top"
+                                src="PICTURE RELATIVE LINK" alt="TEXT"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">TITLE</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                DESCRIPTION
+                        </div>
+                        <div class="card-footer">
+                            <a href="LINK" target="_blank" class="card-link">View Project</a>
+                        </div>
+                    </section>
+                </div> -->
         </article>
     </div>
 
