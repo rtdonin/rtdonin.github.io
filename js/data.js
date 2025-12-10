@@ -9,7 +9,7 @@ const siteData = {
         title: "Full Stack Developer",
         email: "rtdonin@gmail.com",
         github: "https://github.com/rtdonin",
-        linkedin: "https://www.linkedin.com/in/margaret-donin/",
+        linkedin: "https://www.linkedin.com/in/margaret-knee/",
         resume: "https://drive.google.com/file/d/1VUDU0w-eZ2Z2h297WSG7OlAXtHfbLI2l/view?usp=sharing"
     },
 

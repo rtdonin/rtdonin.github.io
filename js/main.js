@@ -1,5 +1,5 @@
 // ============================================
-// MAIN.JS - Rendering Logic
+// Rendering Logic
 // ============================================
 
 (function() {
@@ -111,10 +111,10 @@
     function renderSkills() {
         const container = document.getElementById('skills-container');
         container.innerHTML = `
-            <div class="skills-grid">
+            <div class="skills-list">
                 ${siteData.skills.map(skill => `
-                    <div class="skill-row">
-                        <span class="skill-category">${skill.category}</span>
+                    <div class="skill-line">
+                        <span class="skill-category">${skill.category}:</span>
                         <span class="skill-items">${skill.items.join(', ')}</span>
                     </div>
                 `).join('')}

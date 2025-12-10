@@ -1,5 +1,5 @@
 /* ============================================
-   Margaret Knee - Portfolio Styling
+   Margaret Knee - Portfolio Styles
    ============================================
    
    Color Palette:
@@ -214,7 +214,7 @@ a:hover {
 }
 
 /* ============================================
-   EXPERIENCE SECTION (Timeline)
+   EXPERIENCE SECTION
    ============================================ */
 
 .timeline {
@@ -367,79 +367,29 @@ a:hover {
     justify-content: center;
 }
 
-.skills-grid {
-    background-color: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
+.skills-list {
+    max-width: 750px;
     width: 100%;
-    max-width: 800px;
-    box-shadow: var(--shadow);
 }
 
-.skill-row {
-    display: flex;
+.skill-line {
+    padding: 0.75rem 0;
     border-bottom: 1px solid var(--border);
-    transition: var(--transition);
+    line-height: 1.6;
 }
 
-.skill-row:last-child {
+.skill-line:last-child {
     border-bottom: none;
 }
 
-.skill-row:hover {
-    background-color: var(--blue-50);
-}
-
 .skill-category {
-    flex: 0 0 160px;
-    padding: 1.1rem 1.5rem;
     font-weight: 600;
-    font-size: 1rem;
-    color: var(--white);
-    background-color: var(--blue-600);
-    border-right: none;
-    display: flex;
-    align-items: center;
-}
-
-.skill-row:first-child .skill-category {
-    border-radius: 11px 0 0 0;
-}
-
-.skill-row:last-child .skill-category {
-    border-radius: 0 0 0 11px;
+    color: var(--slate-900);
+    margin-right: 0.5rem;
 }
 
 .skill-items {
-    flex: 1;
-    padding: 1.1rem 1.5rem;
     color: var(--slate-700);
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-@media (max-width: 576px) {
-    .skill-row {
-        flex-direction: column;
-    }
-    
-    .skill-category {
-        flex: none;
-        border-right: none;
-        border-bottom: none;
-        padding: 0.85rem 1.25rem;
-        border-radius: 0 !important;
-    }
-    
-    .skill-row:first-child .skill-category {
-        border-radius: 11px 11px 0 0 !important;
-    }
-    
-    .skill-items {
-        padding: 0.85rem 1.25rem;
-    }
 }
 
 /* ============================================
