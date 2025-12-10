@@ -5,7 +5,6 @@
 (function() {
     'use strict';
 
-    // Helper: Create element with HTML
     function createHTML(html) {
         const template = document.createElement('template');
         template.innerHTML = html.trim();
